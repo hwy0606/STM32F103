@@ -2,12 +2,13 @@
 //STM32F103RCT6
 //USART+DMA发送和接收
 //引脚 PA9 TX PA10 RX
-//协议层
+//驱动层
 //HWY 2017 10 18
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 	 
 
 #include "usart1_dma.h"
+#include "project_config.h"
 #include "sys.h" 
 #include <string.h> 	  
 #include "stm32f10x_dma.h"	
@@ -20,9 +21,6 @@
 #define USART1_GPIO          		   GPIOA
 #define USART1_GPIO_RCC      		   RCC_APB2Periph_GPIOA
 #define USART1_DATA_LEN  64  //接收和发送数据的最大长度
-
-
-
 /*private*/
 u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
 u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
@@ -35,6 +33,7 @@ struct uart1_buffer uart1_rx,uart1_tx;
 * @Description: USART1_DMA初始化
 * @param baud - 串口波特率.    
 */ 
+#ifdef  USE_USART1_DMA
 void USART1_DMA_Init(u32 baud) 
 {  
   
@@ -226,7 +225,7 @@ void USART1_IRQHandler(void)
 }  
  
 
-
+#endif
 
 
 

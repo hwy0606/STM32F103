@@ -30,4 +30,5 @@
 ..\obj\usart1_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\usart1_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart1_dma.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\usart1_dma.o: ..\USER\project_config.h
 ..\obj\usart1_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

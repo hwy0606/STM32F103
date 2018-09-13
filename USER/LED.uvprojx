@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\OBJ\</OutputDirectory>
-          <OutputName>LED</OutputName>
+          <OutputName>STM32_Project</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,6 +395,11 @@
               <FileType>1</FileType>
               <FilePath>.\system_stm32f10x.c</FilePath>
             </File>
+            <File>
+              <FileName>project_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\project_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -409,6 +414,21 @@
               <FileName>usart1_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Usart1_DMA\usart1_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart2_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Usart2_DMA\usart2_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart3_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Usart3_DMA\usart3_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\PWM\pwm.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -469,6 +489,11 @@
               <FileName>stm32f10x_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F10x_FWLib\src\stm32f10x_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_tim.c</FilePath>
             </File>
           </Files>
         </Group>

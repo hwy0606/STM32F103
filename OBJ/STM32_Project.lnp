@@ -5,6 +5,8 @@
 "..\obj\led.o"
 "..\obj\usart1_dma.o"
 "..\obj\usart2_dma.o"
+"..\obj\usart3_dma.o"
+"..\obj\pwm.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"
@@ -14,7 +16,8 @@
 "..\obj\stm32f10x_usart.o"
 "..\obj\misc.o"
 "..\obj\stm32f10x_dma.o"
---library_type=microlib --strict --scatter "..\OBJ\LED.sct"
+"..\obj\stm32f10x_tim.o"
+--library_type=microlib --strict --scatter "..\OBJ\STM32_Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list ".\LED.map" -o ..\OBJ\LED.axf
+--list ".\STM32_Project.map" -o ..\OBJ\STM32_Project.axf

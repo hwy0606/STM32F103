@@ -32,3 +32,7 @@
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\HARDWARE\Usart1_DMA\usart1_dma.h
+..\obj\main.o: ..\HARDWARE\Usart2_DMA\usart2_dma.h
+..\obj\main.o: ..\HARDWARE\Usart3_DMA\usart3_dma.h
+..\obj\main.o: ..\HARDWARE\PWM\pwm.h
+..\obj\main.o: ..\USER\project_config.h

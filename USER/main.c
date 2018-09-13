@@ -2,26 +2,38 @@
 #include "delay.h"
 #include "sys.h"
 #include "usart1_dma.h"
+#include "usart2_dma.h"
+#include "usart3_dma.h"
+#include "pwm.h"
 /*
-本程序无注释 嘻嘻
+注释
 */
  int main(void)
- {
-	 
+ { 
 	delay_init();	    	 	  
 	LED_Init();	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//中断分组配置
-	USART1_DMA_Init(115200);	 
-	 u32 Send_Size =4;
+  USART1_DMA_Init(115200);	
+	USART2_DMA_Init(115200);		
+  USART3_DMA_Init(115200);	
+	PWM_Init_Default();
+  Set_PWM_CH1_Duty_Cycle(80);		 
+	Set_PWM_CH2_Duty_Cycle(80);	
+	u32 Send_Size =4;
 	u8 Send_Date[Send_Size];
-	 Send_Date[0]=0x00;
-	 Send_Date[1]=0x01;
-	 Send_Date[2]=0x02;
-	 Send_Date[3]=0x03;
+	Send_Date[0]=0x00;
+	Send_Date[1]=0x01;
+	Send_Date[2]=0x02;
+	Send_Date[3]=0x03;
+//	 
+	
 	while(1)
 	{
-		USART1_DMA_Send_Once_Data(Send_Date,Send_Size);		
+		USART1_DMA_Send_Once_Data(Send_Date,Send_Size);	
+		USART2_DMA_Send_Once_Data(Send_Date,Send_Size);	
+		USART3_DMA_Send_Once_Data(Send_Date,Send_Size);	
 		delay_ms(1000);		
+//  
 	}
  }
 
