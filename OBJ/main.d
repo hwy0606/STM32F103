@@ -36,3 +36,4 @@
 ..\obj\main.o: ..\HARDWARE\Usart3_DMA\usart3_dma.h
 ..\obj\main.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\main.o: ..\USER\project_config.h
+..\obj\main.o: ..\HARDWARE\Key\key.h

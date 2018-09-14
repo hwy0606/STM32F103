@@ -5,6 +5,7 @@
 #include "usart2_dma.h"
 #include "usart3_dma.h"
 #include "pwm.h"
+#include "key.h"
 /*
 ◊¢ Õ
 */
@@ -12,6 +13,7 @@
  { 
 	delay_init();	    	 	  
 	LED_Init();	
+	KEY_Init();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//÷–∂œ∑÷◊È≈‰÷√
   USART1_DMA_Init(115200);	
 	USART2_DMA_Init(115200);		
@@ -25,7 +27,9 @@
 	Send_Date[1]=0x01;
 	Send_Date[2]=0x02;
 	Send_Date[3]=0x03;
-//	 
+	 
+  LED0=0;
+	LED1=0;
 	
 	while(1)
 	{

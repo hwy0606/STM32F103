@@ -7,6 +7,7 @@
 "..\obj\usart2_dma.o"
 "..\obj\usart3_dma.o"
 "..\obj\pwm.o"
+"..\obj\key.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"
@@ -17,6 +18,8 @@
 "..\obj\misc.o"
 "..\obj\stm32f10x_dma.o"
 "..\obj\stm32f10x_tim.o"
+"..\obj\stm32f10x_exti.o"
+"..\obj\stm32f10x_crc.o"
 --library_type=microlib --strict --scatter "..\OBJ\STM32_Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
