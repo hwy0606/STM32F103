@@ -178,6 +178,8 @@ void SPO2_Response()
 	usMBCRC16(SPO2_DATA,SPO2_DATA_LEN-2);
   SPO2_DATA[8]=Get_ucCRCLo();//CRC校验码低8位
 	SPO2_DATA[9]=Get_ucCRCHi(); //CRC校验码高8位	
+	//发送两遍
+	USART1_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
 	USART1_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
   SPO2_FLAG=0;	
 }

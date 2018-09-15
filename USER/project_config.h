@@ -44,7 +44,6 @@
 #define USART3_GPIO_RCC      		   RCC_APB2Periph_GPIOB
 #define USART3_DATA_LEN  64  //接收和发送数据的最大长度
 
-
 //PWM 默认TIM4
 #define USE_PWM_CH1
 #define USE_PWM_CH2
@@ -85,7 +84,46 @@
 //#define USE_PC8_KEY
 //#define USE_PC9_KEY
 
+//GPIO 4+3
+//4个控制电机正反转 3个控制LED灯
+//全部定义位带操作
+#define USE_MOTOR_GPIO
+#define USE_LED_GPIO
+
+#ifdef USE_MOTOR_GPIO
+#define  MOTOR_GPIO_RCC RCC_APB2Periph_GPIOB
+#define  MOTOR_GPIO_PB12 GPIO_Pin_12
+#define  MOTOR_GPIO_PB13 GPIO_Pin_13
+#define  MOTOR_GPIO_PB14 GPIO_Pin_14
+#define  MOTOR_GPIO_PB15 GPIO_Pin_15
+#define  MOTOR_GPIO         GPIOB
+#define MOTOR1_IN1 PBout(12)	// PB12
+#define MOTOR1_IN2 PBout(13)	// PB13
+#define MOTOR2_IN1 PBout(14)	// PB14
+#define MOTOR2_IN2 PBout(15)	// PB15
+#endif
+
+#ifdef USE_LED_GPIO
+#define  LED_GPIO_RCC RCC_APB2Periph_GPIOC
+#define  LED_GPIO_PC10 GPIO_Pin_10
+#define  LED_GPIO_PC11 GPIO_Pin_11
+#define  LED_GPIO_PC12 GPIO_Pin_12
+#define  LED_GPIO         GPIOC
+#define LED0 PCout(10)	// PC10
+#define LED1 PCout(11)	// PC11
+#define LED2 PCout(12)	// PC12
+#endif
 //数码管
+
+
+//电机驱动
+#define USE_MOTOR_CONTROL1
+
+#define USE_MOTOR_CONTROL2
+
+
+
+
 
 //上位机通信 USART1_PROTOCOL
 /* 第一部分按键信号由按键中断直接发送*/

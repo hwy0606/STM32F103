@@ -4,8 +4,8 @@
 #include "usart1_dma.h"
 #include "usart2_dma.h"
 #include "usart3_dma.h"
-#include "pwm.h"
 #include "key.h"
+#include "motor_control.h"
 #include "usart1_protocol.h"
 /*
 ◊¢ Õ
@@ -18,13 +18,18 @@
 	KEY_Init(); 
 	USART1_Key_Init();
 	USART3_Sensor_Init();
+	 
+	
+	Motor_Init(); 
+	 
+	 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//÷–∂œ∑÷◊È≈‰÷√
+	 
+	 
   USART1_DMA_Init(USART1_BaudRate);	
 //	USART2_DMA_Init(USART2_BaudRate);		
   USART3_DMA_Init(USART3_BaudRate);	
-	PWM_Init_Default();
-  Set_PWM_CH1_Duty_Cycle(80);		 
-	Set_PWM_CH2_Duty_Cycle(80);	
+	
 	 
 	u32 Send_Size =5;
 	u8 Send_Date[Send_Size];
@@ -33,8 +38,8 @@
 	Send_Date[2]=0x02;
 	Send_Date[3]=0x0D;
 	Send_Date[4]=0x0A;	 
-  LED0=1;
-	LED1=1;
+  TEST_LED0=1;
+	TEST_LED1=1;
   
  USART1_DMA_Send_Once_Data(Send_Date,Send_Size);
 	while(1)

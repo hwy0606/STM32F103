@@ -35,4 +35,3 @@
 ..\obj\usart3_dma.o: ..\USER\project_config.h
 ..\obj\usart3_dma.o: ..\HARDWARE\Usart3_Protocol\usart3_protocol.h
 ..\obj\usart3_dma.o: ..\USER\project_config.h
-..\obj\usart3_dma.o: ..\HARDWARE\LED\led.h
