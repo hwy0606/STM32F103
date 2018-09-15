@@ -34,3 +34,5 @@
 ..\obj\key.o: ..\SYSTEM\delay\delay.h
 ..\obj\key.o: ..\SYSTEM\sys\sys.h
 ..\obj\key.o: ..\HARDWARE\LED\led.h
+..\obj\key.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h
+..\obj\key.o: ..\USER\project_config.h

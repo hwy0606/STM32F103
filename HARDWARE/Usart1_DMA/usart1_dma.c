@@ -146,10 +146,12 @@ void USART1_DMA_Init(u32 baud)
  * @param size - 发送数据字节数    
  */  
 void USART1_DMA_Send_Once_Data(uint8_t *data,uint16_t size)  //发送数据函数
-{  
-    /* 等待空闲 */ 
-    while (USART1_TX_BUSY);  
-    USART1_TX_BUSY = 1;  //发送中
+{ 
+	/* 发送检测循环容易卡死*/	
+//    /* 等待空闲 */ 
+//    while (USART1_TX_BUSY);  
+//    USART1_TX_BUSY = 1;  //发送中
+	
     /* 复制数据 */ 
     memcpy(USART1_SEND_DATA,data,size);
 	/* 改变datasize前先要禁止通道工作 */ 

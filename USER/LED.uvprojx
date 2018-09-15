@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16;..\HARDWARE\Usart1_Protocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -434,6 +434,16 @@
               <FileName>key.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Key\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart1_protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Usart1_Protocol\usart1_protocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc_16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\CRC_16\crc_16.c</FilePath>
             </File>
           </Files>
         </Group>

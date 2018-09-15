@@ -25,8 +25,8 @@ void LED_Init(void)
  GPIO_Init(GPIOA, &GPIO_InitStructure);					 //根据设定参数初始化GPIOB.5
  GPIO_SetBits(GPIOA,GPIO_Pin_8);						 //PB.5 输出高
 
-// GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;	    		 //LED1-->PE.5 端口配置, 推挽输出
-// GPIO_Init(GPIOD, &GPIO_InitStructure);	  				 //推挽输出 ，IO口速度为50MHz
-// GPIO_SetBits(GPIOD,GPIO_Pin_2); 						 //PE.5 输出高 
+ GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;	    		 //LED1-->PE.5 端口配置, 推挽输出
+ GPIO_Init(GPIOD, &GPIO_InitStructure);	  				 //推挽输出 ，IO口速度为50MHz
+ GPIO_SetBits(GPIOD,GPIO_Pin_2); 						 //PE.5 输出高 
 }
  

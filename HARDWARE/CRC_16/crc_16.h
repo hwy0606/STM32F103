@@ -1,9 +1,9 @@
 #ifndef __CRC_16_H
 #define __CRC_16_H
+#include "project_config.h"	
+#include "stm32f10x.h"
 
-#include "stm32f4xx.h"
-
-
+#ifdef USE_CRC_SOFTWARE
 void usMBCRC16( u8 * pucFrame, u8 usLen); //启动校验函数
 u8 Get_ucCRCHi();//获取高8位
 u8 Get_ucCRCLo();//获取低8位
@@ -106,6 +106,6 @@ static const u8 aucCRCLo[] = {
 };
 
 
-
+#endif
 
 #endif     

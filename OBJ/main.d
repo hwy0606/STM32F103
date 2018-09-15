@@ -37,3 +37,5 @@
 ..\obj\main.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\main.o: ..\USER\project_config.h
 ..\obj\main.o: ..\HARDWARE\Key\key.h
+..\obj\main.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h
+..\obj\main.o: ..\USER\project_config.h

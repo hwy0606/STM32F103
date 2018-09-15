@@ -21,18 +21,21 @@
 
 
 //CRC校验方法 默认只能定义一种 可使用硬件CRC 或者 查表法软件CRC
-#define USE_CRC_HARDWARE
+
+//ps: 目前只写了软件CRC方法 硬件CRC暂时不可用
+//#define USE_CRC_HARDWARE
 #define USE_CRC_SOFTWARE
 
 //按键8个 预留两个 总共驱动10个按键引脚
 #define USE_PA0_KEY
 #define USE_PA1_KEY
-#define USE_PD2_KEY
-#define USE_PB3_KEY
-#define USE_PB4_KEY
-#define USE_PB5_KEY
-
-#define USE_PC8_KEY
-#define USE_PC9_KEY
+//#define USE_PD2_KEY 
+#define USE_PC3_KEY
+#define USE_PC4_KEY
+#define USE_PC5_KEY
+#define USE_PC6_KEY
+#define USE_PC7_KEY
+//#define USE_PC8_KEY
+//#define USE_PC9_KEY
 
 //数码管

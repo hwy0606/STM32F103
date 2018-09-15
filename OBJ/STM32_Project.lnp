@@ -8,6 +8,8 @@
 "..\obj\usart3_dma.o"
 "..\obj\pwm.o"
 "..\obj\key.o"
+"..\obj\usart1_protocol.o"
+"..\obj\crc_16.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"
