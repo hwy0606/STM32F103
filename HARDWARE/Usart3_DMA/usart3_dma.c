@@ -11,22 +11,15 @@
 #include <string.h> 	  
 #include "delay.h"
 #include "project_config.h"
-/* UART GPIO define. */
-#define USART3_GPIO_TX       		   GPIO_Pin_10
-#define USART3_GPIO_RX       		   GPIO_Pin_11
-#define USART3_GPIO_TX_PinSource   GPIO_PinSource10
-#define USART3_GPIO_RX_PinSource   GPIO_PinSource11
-#define USART3_GPIO          		   GPIOB
-#define USART3_GPIO_RCC      		   RCC_APB2Periph_GPIOB
-#define USART3_DATA_LEN  64  //接收和发送数据的最大长度
+#include "usart3_protocol.h"
 /*private*/
-u8 USART3_SEND_DATA[USART3_DATA_LEN];  
-u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
-u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART3_SEND_DATA[USART3_DATA_LEN];  
+static u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
+static u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart3_buffer uart3_rx,uart3_tx;
-	  
-
+u8 SPO2_DATA[SPO2_DATA_LEN];
+u8 SPO2_FLAG=0; //0-未更新 1-更新
 /**
 * @Description: UART3_DMA初始化
 * @param baud - 串口波特率.    
@@ -214,6 +207,18 @@ void USART3_IRQHandler(void)
 	if(USART_GetITStatus(USART3, USART_IT_IDLE) != RESET)
 	{ 
     	uart3_rx.len = USART3_RX_Finish_IRQ(uart3_rx.buf);	 
+		  //接收数据在USART3_RECEIVE_DATA 数组中 
+		  //判断是实时数据还是状态数据 实时数据则丢弃 状态数据复制到SP02数组中
+		if(Is_State_Date(&USART3_RECEIVE_DATA[0]))
+		{	
+			//如果是状态数据 则将USART3_RECEIVE_DATA数组复制到SPO2数组中 只复制有用信息 此处未检验校验和 后期可完善
+				SPO2_DATA[3]=USART3_RECEIVE_DATA[6];//有效数据第一位 SPO2计算结果 
+	      SPO2_DATA[4]=USART3_RECEIVE_DATA[7];//有效数据第二位 灌注指数低8位 
+	      SPO2_DATA[5]=USART3_RECEIVE_DATA[8];//有效数据第三位 灌注指数高8位 
+				SPO2_DATA[6]=USART3_RECEIVE_DATA[11];//有效数据第四位 状态数据 
+				SPO2_DATA[7]=USART3_RECEIVE_DATA[13];//有效数据第五位 SQI信号质量 
+			  SPO2_FLAG=1; //更新等待发送
+		}
 	}  
 }  
  

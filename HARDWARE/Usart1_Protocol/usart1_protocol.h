@@ -36,6 +36,6 @@ void KEY8_Response();
 #ifdef USE_PC9_KEY
 void KEY9_Response();
 #endif
-
+void SPO2_Response();
 
 #endif

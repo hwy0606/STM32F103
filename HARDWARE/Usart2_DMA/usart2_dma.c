@@ -11,18 +11,11 @@
 #include <string.h> 	  
 #include "delay.h"
 #include "project_config.h"
-/* UART GPIO define. */
-#define USART2_GPIO_TX       		   GPIO_Pin_2
-#define USART2_GPIO_RX       		   GPIO_Pin_3
-#define USART2_GPIO_TX_PinSource   GPIO_PinSource2
-#define USART2_GPIO_RX_PinSource   GPIO_PinSource3
-#define USART2_GPIO          		   GPIOA
-#define USART2_GPIO_RCC      		   RCC_APB2Periph_GPIOA
-#define USART2_DATA_LEN  64  //接收和发送数据的最大长度
+
 /*private*/
-u8 USART2_SEND_DATA[USART2_DATA_LEN];  
-u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
-u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART2_SEND_DATA[USART2_DATA_LEN];  
+static u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
+static u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart2_buffer uart2_rx,uart2_tx;
 	  

@@ -10,6 +10,7 @@
 "..\obj\key.o"
 "..\obj\usart1_protocol.o"
 "..\obj\crc_16.o"
+"..\obj\usart3_protocol.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"

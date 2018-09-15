@@ -14,15 +14,7 @@
 * @param arr：自动重装值
          psc：时钟预分频数  
 */ 
-#define PWM_CH1_GPIO     GPIO_Pin_6
-#define PWM_CH2_GPIO     GPIO_Pin_7
-#define PWM_CH3_GPIO     GPIO_Pin_8
-#define PWM_CH4_GPIO     GPIO_Pin_9
-#define PWM_GPIO_RCC     RCC_APB2Periph_GPIOB
-#define PWM_TIM_RCC      RCC_APB1Periph_TIM4
-#define PWM_AFIO_RCC     RCC_APB2Periph_AFIO
-#define PWM_GPIO         GPIOB
-#define PWM_TIM          TIM4
+
 void PWM_Init(u16 arr,u16 psc)
 { 
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -122,13 +114,12 @@ void PWM_Init(u16 arr,u16 psc)
 #endif
 }
 
-//默认使用PWM频率 100Khz
-#define PWM_Frequency 100
+
 #ifdef USE_PWM_CH1 || USE_PWM_CH2 ||USE_PWM_CH3 ||USE_PWM_CH4
 
 void PWM_Init_Default()
 {
-	PWM_Init(719,0);//不分频。PWM频率=72000Khz/(719+1)=100Khz 
+	PWM_Init(PWM_ARR,PWM_PSC);
 }
 
 #ifdef USE_PWM_CH1

@@ -13,18 +13,11 @@
 #include <string.h> 	  
 #include "stm32f10x_dma.h"	
 
-/* UART GPIO define. */            //宏定义
-#define USART1_GPIO_TX       		   GPIO_Pin_9
-#define USART1_GPIO_RX       		   GPIO_Pin_10
-#define USART1_GPIO_TX_PinSource       GPIO_PinSource9
-#define USART1_GPIO_RX_PinSource       GPIO_PinSource10
-#define USART1_GPIO          		   GPIOA
-#define USART1_GPIO_RCC      		   RCC_APB2Periph_GPIOA
-#define USART1_DATA_LEN  64  //接收和发送数据的最大长度
+
 /*private*/
-u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
-u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
-u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
+static u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
+static u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart1_buffer uart1_rx,uart1_tx;
 	  

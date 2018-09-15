@@ -162,6 +162,22 @@ void KEY9_Response()
 }
 #endif
 
-/*第二部分 按键通信协议*/
+/*第二部分 血压通信协议*/
 /*数据长度 0x*/
 /*数据类型码 0x02*/
+
+
+/*第三部分 血氧通信协议*/
+/*数据长度 0x0A*/
+/*数据类型码 0x03*/
+extern u8 SPO2_DATA[SPO2_DATA_LEN]; //直接用全局变量 不做传址
+extern u8 SPO2_FLAG;
+void SPO2_Response()
+{ 
+	//此处做一个CRC校验然后发送，发送完成后复位SPO2_FLAG标志位
+	usMBCRC16(SPO2_DATA,SPO2_DATA_LEN-2);
+  SPO2_DATA[8]=Get_ucCRCLo();//CRC校验码低8位
+	SPO2_DATA[9]=Get_ucCRCHi(); //CRC校验码高8位	
+	USART1_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
+  SPO2_FLAG=0;	
+}
