@@ -142,12 +142,13 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing usart1_protocol.o(.constdata), (512 bytes).
+    Removing usart2_protocol.o(.text), (2 bytes).
     Removing sys.o(.emb_text), (6 bytes).
     Removing sys.o(.text), (12 bytes).
     Removing core_cm3.o(.emb_text), (32 bytes).
     Removing stm32f10x_crc.o(.text), (72 bytes).
 
-5 unused section(s) (total 634 bytes) removed from the image.
+6 unused section(s) (total 636 bytes) removed from the image.
 
 ==============================================================================
 
@@ -157,18 +158,18 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
@@ -188,6 +189,7 @@ Image Symbol Table
     ..\HARDWARE\Usart1_DMA\usart1_dma.c      0x00000000   Number         0  usart1_dma.o ABSOLUTE
     ..\HARDWARE\Usart1_Protocol\usart1_protocol.c 0x00000000   Number         0  usart1_protocol.o ABSOLUTE
     ..\HARDWARE\Usart2_DMA\usart2_dma.c      0x00000000   Number         0  usart2_dma.o ABSOLUTE
+    ..\HARDWARE\Usart2_Protocol\usart2_protocol.c 0x00000000   Number         0  usart2_protocol.o ABSOLUTE
     ..\HARDWARE\Usart3_DMA\usart3_dma.c      0x00000000   Number         0  usart3_dma.o ABSOLUTE
     ..\HARDWARE\Usart3_Protocol\usart3_protocol.c 0x00000000   Number         0  usart3_protocol.o ABSOLUTE
     ..\STM32F10x_FWLib\src\misc.c            0x00000000   Number         0  misc.o ABSOLUTE
@@ -659,16 +661,16 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000130   Data   RO          432    RESET               startup_stm32f10x_hd.o
-    0x08000130   0x08000130   0x00000000   Code   RO          535  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO          570    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO          573    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO          575    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO          577    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO          578    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO          580    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO          582    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO          571    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000000   0x08000000   0x00000130   Data   RO          447    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x08000130   0x00000000   Code   RO          550  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO          585    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO          588    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO          590    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO          592    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO          593    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO          595    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO          597    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO          586    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000144   0x08000144   0x00000080   Code   RO            1    .text               main.o
     0x080001c4   0x080001c4   0x0000001a   Code   RO          131    .text               stm32f10x_it.o
     0x080001de   0x080001de   0x00000002   PAD
@@ -684,27 +686,27 @@ Memory Map of the image
     0x080011fc   0x080011fc   0x00000048   Code   RO          345    .text               usart3_protocol.o
     0x08001244   0x08001244   0x000000e4   Code   RO          362    .text               gpio.o
     0x08001328   0x08001328   0x000000b0   Code   RO          377    .text               motor_control.o
-    0x080013d8   0x080013d8   0x000000d4   Code   RO          389    .text               delay.o
-    0x080014ac   0x080014ac   0x00000024   Code   RO          433    .text               startup_stm32f10x_hd.o
-    0x080014d0   0x080014d0   0x0000035c   Code   RO          437    .text               stm32f10x_gpio.o
-    0x0800182c   0x0800182c   0x000003a4   Code   RO          449    .text               stm32f10x_rcc.o
-    0x08001bd0   0x08001bd0   0x00000408   Code   RO          463    .text               stm32f10x_usart.o
-    0x08001fd8   0x08001fd8   0x000000dc   Code   RO          475    .text               misc.o
-    0x080020b4   0x080020b4   0x00000254   Code   RO          487    .text               stm32f10x_dma.o
-    0x08002308   0x08002308   0x00000e1a   Code   RO          499    .text               stm32f10x_tim.o
+    0x080013d8   0x080013d8   0x000000d4   Code   RO          404    .text               delay.o
+    0x080014ac   0x080014ac   0x00000024   Code   RO          448    .text               startup_stm32f10x_hd.o
+    0x080014d0   0x080014d0   0x0000035c   Code   RO          452    .text               stm32f10x_gpio.o
+    0x0800182c   0x0800182c   0x000003a4   Code   RO          464    .text               stm32f10x_rcc.o
+    0x08001bd0   0x08001bd0   0x00000408   Code   RO          478    .text               stm32f10x_usart.o
+    0x08001fd8   0x08001fd8   0x000000dc   Code   RO          490    .text               misc.o
+    0x080020b4   0x080020b4   0x00000254   Code   RO          502    .text               stm32f10x_dma.o
+    0x08002308   0x08002308   0x00000e1a   Code   RO          514    .text               stm32f10x_tim.o
     0x08003122   0x08003122   0x00000002   PAD
-    0x08003124   0x08003124   0x0000011c   Code   RO          511    .text               stm32f10x_exti.o
-    0x08003240   0x08003240   0x00000024   Code   RO          538    .text               mc_w.l(memcpya.o)
-    0x08003264   0x08003264   0x00000024   Code   RO          586    .text               mc_w.l(init.o)
+    0x08003124   0x08003124   0x0000011c   Code   RO          526    .text               stm32f10x_exti.o
+    0x08003240   0x08003240   0x00000024   Code   RO          553    .text               mc_w.l(memcpya.o)
+    0x08003264   0x08003264   0x00000024   Code   RO          601    .text               mc_w.l(init.o)
     0x08003288   0x08003288   0x00000030   Code   RO          308    i.KEY0_Response     usart1_protocol.o
     0x080032b8   0x080032b8   0x00000030   Code   RO          314    i.KEY1_Response     usart1_protocol.o
-    0x080032e8   0x080032e8   0x0000000e   Code   RO          590    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080032f6   0x080032f6   0x00000002   Code   RO          591    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080032f8   0x080032f8   0x0000000e   Code   RO          592    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080032e8   0x080032e8   0x0000000e   Code   RO          605    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080032f6   0x080032f6   0x00000002   Code   RO          606    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080032f8   0x080032f8   0x0000000e   Code   RO          607    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08003306   0x08003306   0x00000002   PAD
-    0x08003308   0x08003308   0x0000006c   Code   RO          543    i.malloc            mc_w.l(malloc.o)
+    0x08003308   0x08003308   0x0000006c   Code   RO          558    i.malloc            mc_w.l(malloc.o)
     0x08003374   0x08003374   0x00000200   Data   RO          331    .constdata          crc_16.o
-    0x08003574   0x08003574   0x00000020   Data   RO          588    Region$$Table       anon$$obj.o
+    0x08003574   0x08003574   0x00000020   Data   RO          603    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003594, Size: 0x00000ad0, Max: 0x0000c000, ABSOLUTE)
@@ -717,15 +719,15 @@ Memory Map of the image
     0x20000016   0x080035aa   0x00000002   Data   RW          248    .data               usart3_dma.o
     0x20000018   0x080035ac   0x00000006   Data   RW          297    .data               usart1_protocol.o
     0x2000001e   0x080035b2   0x00000002   Data   RW          332    .data               crc_16.o
-    0x20000020   0x080035b4   0x00000004   Data   RW          390    .data               delay.o
-    0x20000024   0x080035b8   0x00000014   Data   RW          450    .data               stm32f10x_rcc.o
-    0x20000038   0x080035cc   0x00000004   Data   RW          584    .data               mc_w.l(mvars.o)
-    0x2000003c   0x080035d0   0x00000004   Data   RW          585    .data               mc_w.l(mvars.o)
+    0x20000020   0x080035b4   0x00000004   Data   RW          405    .data               delay.o
+    0x20000024   0x080035b8   0x00000014   Data   RW          465    .data               stm32f10x_rcc.o
+    0x20000038   0x080035cc   0x00000004   Data   RW          599    .data               mc_w.l(mvars.o)
+    0x2000003c   0x080035d0   0x00000004   Data   RW          600    .data               mc_w.l(mvars.o)
     0x20000040        -       0x00000182   Zero   RW          203    .bss                usart1_dma.o
     0x200001c2        -       0x00000182   Zero   RW          228    .bss                usart2_dma.o
     0x20000344        -       0x0000018c   Zero   RW          247    .bss                usart3_dma.o
-    0x200004d0        -       0x00000200   Zero   RW          431    HEAP                startup_stm32f10x_hd.o
-    0x200006d0        -       0x00000400   Zero   RW          430    STACK               startup_stm32f10x_hd.o
+    0x200004d0        -       0x00000200   Zero   RW          446    HEAP                startup_stm32f10x_hd.o
+    0x200006d0        -       0x00000400   Zero   RW          445    STACK               startup_stm32f10x_hd.o
 
 
 ==============================================================================
