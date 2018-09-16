@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16;..\HARDWARE\Usart1_Protocol;..\HARDWARE\Usart3_Protocol;..\HARDWARE\Motor_Control;..\HARDWARE\Usart2_Protocol</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16;..\HARDWARE\Usart1_Protocol;..\HARDWARE\Usart3_Protocol;..\HARDWARE\Motor_Control;..\HARDWARE\Usart2_Protocol;..\HARDWARE\Usart2_Checkout</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -441,11 +441,6 @@
               <FilePath>..\HARDWARE\Usart1_Protocol\usart1_protocol.c</FilePath>
             </File>
             <File>
-              <FileName>crc_16.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\CRC_16\crc_16.c</FilePath>
-            </File>
-            <File>
               <FileName>usart3_protocol.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Usart3_Protocol\usart3_protocol.c</FilePath>
@@ -464,6 +459,11 @@
               <FileName>usart2_protocol.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Usart2_Protocol\usart2_protocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart2_checkout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Usart2_Checkout\usart2_checkout.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -500,6 +500,11 @@
         <Group>
           <GroupName>FWLib</GroupName>
           <Files>
+            <File>
+              <FileName>crc_16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\CRC_16\crc_16.c</FilePath>
+            </File>
             <File>
               <FileName>stm32f10x_gpio.c</FileName>
               <FileType>1</FileType>

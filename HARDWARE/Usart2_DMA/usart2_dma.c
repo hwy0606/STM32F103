@@ -206,7 +206,10 @@ void USART2_IRQHandler(void)
     /* 接收完成中断处理 */ 
 	if(USART_GetITStatus(USART2, USART_IT_IDLE) != RESET)
 	{ 
-    	uart2_rx.len = USART2_RX_Finish_IRQ(uart2_rx.buf);	 
+    	uart2_rx.len = USART2_RX_Finish_IRQ(uart2_rx.buf);	
+     /* 用户处理函数 */ 
+     
+		
 	}  
 }  
  

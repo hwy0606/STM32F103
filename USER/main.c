@@ -7,6 +7,8 @@
 #include "key.h"
 #include "motor_control.h"
 #include "usart1_protocol.h"
+#include "usart2_protocol.h"
+#include "usart3_protocol.h"
 /*
 注释
 */
@@ -17,8 +19,9 @@
 	LED_Init();	
 	KEY_Init(); 
 	USART1_Key_Init();
+	USART2_Sensor_Init();
 	USART3_Sensor_Init();
-	 
+	
 	
 	Motor_Init(); 
 	 
@@ -27,7 +30,7 @@
 	 
 	 
   USART1_DMA_Init(USART1_BaudRate);	
-//	USART2_DMA_Init(USART2_BaudRate);		
+	USART2_DMA_Init(USART2_BaudRate);		
   USART3_DMA_Init(USART3_BaudRate);	
 	
 	 
@@ -42,6 +45,8 @@
 	TEST_LED1=1;
   
  USART1_DMA_Send_Once_Data(Send_Date,Send_Size);
+ 
+ BP_Measurement();
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新
@@ -51,4 +56,5 @@
 		}
 	}
  }
+ 
 

@@ -61,7 +61,7 @@
 #define PWM_GPIO         GPIOB
 #define PWM_TIM          TIM4
 
-//默认使用PWM频率 100Khz
+//默认使用PWM频率 100Khz 单位KHZ
 #define PWM_Frequency 100
 #define PWM_ARR  (72000/PWM_Frequency)-1
 #define PWM_PSC 0 //不分频
@@ -130,6 +130,9 @@
 
 /* 第三部分血氧信息放在主循环中空闲时发送，更新频率1HZ，实际每次更新后连续发送两遍*/ 
 //血压模块   USART2_PROTOCOL
+#define BP_DATA_LEN 16  
+#define BP_Measurement_LEN 3
+
 
 //血氧模块   USARAT3_PROTOCOL
 /* */

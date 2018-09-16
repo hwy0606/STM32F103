@@ -22,23 +22,29 @@ Dialog DLL:        TARMSTM.DLL
  
 <h2>Project:</h2>
 F:\STM32 Project\USER\LED.uvprojx
-Project File Date:  09/15/2018
+Project File Date:  09/16/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LED'
 compiling usart2_protocol.c...
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(6): warning:  #1295-D: Deprecated declaration USART2_Sensor_Init - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Sensor_Init - give arg types
   void USART2_Sensor_Init();
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1-D: last line of file ends without a newline
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration BP_Measurement - give arg types
+  void BP_Measurement();  //MASTER ≥…»ÀBP≤‚¡ø
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(20): warning:  #1-D: last line of file ends without a newline
   #endif
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(15): warning:  #1-D: last line of file ends without a newline
+..\HARDWARE\Usart2_Checkout\usart2_checkout.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart2_Protocol\usart2_protocol.c(108): warning:  #1-D: last line of file ends without a newline
   }
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c: 3 warnings, 0 errors
+..\HARDWARE\Usart2_Protocol\usart2_protocol.c(34): warning:  #177-D: variable "BP_RECEIVE_DATA"  was declared but never referenced
+  static u8 BP_RECEIVE_DATA[BP_DATA_LEN];
+..\HARDWARE\Usart2_Protocol\usart2_protocol.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=12868 RO-data=848 RW-data=64 ZI-data=2704  
+Program Size: Code=13112 RO-data=848 RW-data=64 ZI-data=2736  
 FromELF: creating hex file...
-"..\OBJ\STM32_Project.axf" - 0 Error(s), 3 Warning(s).
+"..\OBJ\STM32_Project.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 

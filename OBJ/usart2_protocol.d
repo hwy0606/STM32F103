@@ -31,3 +31,6 @@
 ..\obj\usart2_protocol.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart2_protocol.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart2_protocol.o: ..\USER\project_config.h
+..\obj\usart2_protocol.o: ..\HARDWARE\Usart2_DMA\usart2_dma.h
+..\obj\usart2_protocol.o: ..\HARDWARE\Usart2_Checkout\usart2_checkout.h
+..\obj\usart2_protocol.o: ..\USER\project_config.h
