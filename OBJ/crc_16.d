@@ -30,4 +30,3 @@
 ..\obj\crc_16.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\crc_16.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\crc_16.o: ..\STM32F10x_FWLib\inc\misc.h
-..\obj\crc_16.o: ..\USER\project_config.h

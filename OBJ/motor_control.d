@@ -32,4 +32,3 @@
 ..\obj\motor_control.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\motor_control.o: ..\USER\project_config.h
 ..\obj\motor_control.o: ..\HARDWARE\PWM\pwm.h
-..\obj\motor_control.o: ..\USER\project_config.h

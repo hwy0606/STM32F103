@@ -4,6 +4,11 @@
 //HWY 2018 09 13
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 
+
+#ifndef PROJECT_CONFIG_H
+#define PROJECT_CONFIG_H
+
+
 //LED调试
 #define USE_LED0
 #define USE_LED1
@@ -131,7 +136,7 @@
 /* 第三部分血氧信息放在主循环中空闲时发送，更新频率1HZ，实际每次更新后连续发送两遍*/ 
 //血压模块   USART2_PROTOCOL
 #define BP_DATA_LEN 16  
-#define BP_Measurement_LEN 3
+
 
 
 //血氧模块   USARAT3_PROTOCOL
@@ -139,3 +144,4 @@
 #define SPO2_DATA_LEN 10
 
 
+#endif
