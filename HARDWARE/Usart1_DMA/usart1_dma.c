@@ -12,12 +12,12 @@
 #include "sys.h" 
 #include <string.h> 	  
 #include "stm32f10x_dma.h"	
-
-
+#include "usart1_protocol.h"
+#include "usart2_protocol.h"
 /*private*/
-static u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
-static u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
-static u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
+ u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
+ u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
+ u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart1_buffer uart1_rx,uart1_tx;
 	  
@@ -216,6 +216,16 @@ void USART1_IRQHandler(void)
 	if(USART_GetITStatus(USART1, USART_IT_IDLE) != RESET)
 	{ 
     	uart1_rx.len = USART1_RX_Finish_IRQ(uart1_rx.buf);
+		/*用户操作函数*/
+		/*判断是不是血压操作指令 后期可更改为switch结构 */
+		if(Is_BP_Order(&USART1_RECEIVE_DATA[0])) 
+		{
+			BP_Order_USART2(&USART1_RECEIVE_DATA[0]);
+		}
+		
+		
+		
+		
 	}  
 }  
  

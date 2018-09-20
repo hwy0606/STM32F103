@@ -7,6 +7,8 @@
 #include "key.h"
 #include "motor_control.h"
 #include "usart1_protocol.h"
+#include "usart2_protocol.h"
+#include "usart3_protocol.h"
 /*
 注释
 */
@@ -27,7 +29,7 @@
 	 
 	 
   USART1_DMA_Init(USART1_BaudRate);	
-//	USART2_DMA_Init(USART2_BaudRate);		
+	USART2_DMA_Init(USART2_BaudRate);		
   USART3_DMA_Init(USART3_BaudRate);	
 	
 	 
@@ -42,6 +44,10 @@
 	TEST_LED1=1;
   
  USART1_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口1
+  
+ 
+ 
+ 
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新

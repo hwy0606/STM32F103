@@ -166,8 +166,38 @@ void KEY9_Response()
 /*第二部分 血压通信协议*/
 /*数据长度 0x*/
 /*数据类型码 0x02*/
-//所有收到的数据原封不动的转发
+//所有收到的数据原封不动的转发 收到信息立刻转发
+u8 Is_BP_Order(u8 *USART_RECEIVE_DATA) //判断是不是血压指令 帧头和0x02数据类型码 不做CRC校验了
+{
+	if(((unsigned short)USART_RECEIVE_DATA[2]==0X02)) //数据类型码
+	{
+	if(((unsigned short)USART_RECEIVE_DATA[0]==0XA5))
+	{
+		return 1;
+	}
+	}
+	return 0;
+}
+/*将串口2收到的数据 原封不动的通过串口1发送回去 */
 
+
+extern u8 USART2_BP_DATA[32];
+
+void USART1_BP_Response(u8 *USART1_RECEIVE_DATA,u16 DATA_LEN)
+{
+	USART2_BP_DATA[0]=0x5A;
+	USART2_BP_DATA[1]=DATA_LEN+0x05;
+	USART2_BP_DATA[2]=0X02;
+	for(int i=0;i<DATA_LEN;i++)
+	{
+		USART2_BP_DATA[3+i]=USART1_RECEIVE_DATA[i];
+	}
+	//启动CRC校验
+	usMBCRC16(USART2_BP_DATA,DATA_LEN+0x03);
+	USART2_BP_DATA[DATA_LEN+0x03]=Get_ucCRCLo(); //CRC校验码低8位
+	USART2_BP_DATA[DATA_LEN+0x04]=Get_ucCRCHi(); //CRC校验码高8位	
+	USART1_DMA_Send_Once_Data(USART2_BP_DATA,DATA_LEN+0x05);	
+}
 
 
 /*第三部分 血氧通信协议*/

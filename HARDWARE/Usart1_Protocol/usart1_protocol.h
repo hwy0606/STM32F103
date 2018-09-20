@@ -36,6 +36,10 @@ void KEY8_Response();
 #ifdef USE_PC9_KEY
 void KEY9_Response();
 #endif
+void USART1_BP_Response(u8 *USART1_RECEIVE_DATA,u16 DATA_LEN);
+
+u8 Is_BP_Order(u8 *USART_RECEIVE_DATA); 
+
 void SPO2_Response();
 
 #endif

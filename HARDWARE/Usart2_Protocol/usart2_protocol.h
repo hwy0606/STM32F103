@@ -4,7 +4,7 @@
 
 #include "sys.h"
 
-
+void BP_Order_USART2(u8 *USART_RECEIVE_DATA);
 
 
 #endif

@@ -11,11 +11,11 @@
 #include <string.h> 	  
 #include "delay.h"
 #include "project_config.h"
-
+#include "usart1_protocol.h"
 /*private*/
-static u8 USART2_SEND_DATA[USART2_DATA_LEN];  
-static u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
-static u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
+ u8 USART2_SEND_DATA[USART2_DATA_LEN];  
+ u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
+ u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart2_buffer uart2_rx,uart2_tx;
 	  
@@ -207,6 +207,8 @@ void USART2_IRQHandler(void)
 	if(USART_GetITStatus(USART2, USART_IT_IDLE) != RESET)
 	{ 
     	uart2_rx.len = USART2_RX_Finish_IRQ(uart2_rx.buf);	 
+		/*用户操作函数*/
+		USART1_BP_Response (&USART2_RECEIVE_DATA[0],uart2_rx.len);
 	}  
 }  
  

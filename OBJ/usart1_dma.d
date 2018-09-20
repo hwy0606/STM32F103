@@ -32,3 +32,6 @@
 ..\obj\usart1_dma.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart1_dma.o: ..\USER\project_config.h
 ..\obj\usart1_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usart1_dma.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h
+..\obj\usart1_dma.o: ..\USER\project_config.h
+..\obj\usart1_dma.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h

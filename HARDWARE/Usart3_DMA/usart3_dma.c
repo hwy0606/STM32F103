@@ -13,9 +13,9 @@
 #include "project_config.h"
 #include "usart3_protocol.h"
 /*private*/
-static u8 USART3_SEND_DATA[USART3_DATA_LEN];  
-static u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
-static u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
+ u8 USART3_SEND_DATA[USART3_DATA_LEN];  
+ u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
+ u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart3_buffer uart3_rx,uart3_tx;
 u8 SPO2_DATA[SPO2_DATA_LEN];

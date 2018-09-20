@@ -39,3 +39,6 @@
 ..\obj\main.o: ..\USER\project_config.h
 ..\obj\main.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h
 ..\obj\main.o: ..\USER\project_config.h
+..\obj\main.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h
+..\obj\main.o: ..\HARDWARE\Usart3_Protocol\usart3_protocol.h
+..\obj\main.o: ..\USER\project_config.h
