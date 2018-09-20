@@ -13,6 +13,7 @@
 "..\obj\usart3_protocol.o"
 "..\obj\gpio.o"
 "..\obj\motor_control.o"
+"..\obj\usart2_protocol.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"

@@ -22,6 +22,7 @@
 /*有效数据 0x01-0x0A*/ 
 #define Send_Size_Key  6
 u8 Send_Date_Key[Send_Size_Key];
+
 void USART1_Key_Init()
 {
   Send_Date_Key[0]=0x5A; //帧头

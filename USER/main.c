@@ -41,7 +41,7 @@
   TEST_LED0=1;
 	TEST_LED1=1;
   
- USART1_DMA_Send_Once_Data(Send_Date,Send_Size);
+ USART1_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口1
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新

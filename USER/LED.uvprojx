@@ -460,6 +460,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Motor_Control\motor_control.c</FilePath>
             </File>
+            <File>
+              <FileName>usart2_protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Usart2_Protocol\usart2_protocol.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
