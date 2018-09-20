@@ -38,4 +38,13 @@ void KEY9_Response();
 #endif
 void SPO2_Response();
 
+
+
+void BP_O_response();
+void BP_K_response();
+void BP_Busy_response();
+void BP_Abort_response();
+void BP_Sleep_response();
+void BP_Status_response(u8 *USART2_RECEIVE_DATA);
+u8 BP_Measurement(u8 *USART1_RECEIVE_DATA);
 #endif

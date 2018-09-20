@@ -12,7 +12,7 @@
 #include "sys.h" 
 #include <string.h> 	  
 #include "stm32f10x_dma.h"	
-
+#include "usart2_protocol.h"
 
 /*private*/
 static u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
@@ -20,7 +20,7 @@ static u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
 static u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart1_buffer uart1_rx,uart1_tx;
-	  
+ u8 USART_RECEIVE_MODE; 
 
 /**
 * @Description: USART1_DMA初始化
@@ -215,9 +215,59 @@ void USART1_IRQHandler(void)
     /* 接收完成中断处理 */ 
 	if(USART_GetITStatus(USART1, USART_IT_IDLE) != RESET)
 	{ 
-    	uart1_rx.len = USART1_RX_Finish_IRQ(uart1_rx.buf);
-	}  
-}  
+    	uart1_rx.len = USART1_RX_Finish_IRQ(uart1_rx.buf);	
+		/* 用户处理函数 */ 
+		USART_RECEIVE_MODE=USART1_Flag(&USART1_RECEIVE_DATA[0]);
+		switch (USART_RECEIVE_MODE){
+			case 0x01: //开始成人模式BP
+      {
+				switch (BP_Measurement(&USART1_RECEIVE_DATA[0]))
+				{
+					case 0x01:
+					{
+						BP_Measurement_Start(); //串口2发送开始BP测量相关指令
+					}
+					case 0x02:
+					{
+						BP_Measurement_Stop(); //串口2发送中止BP测量相关指令
+					}
+				}
+				
+				
+				
+			  break;
+			}
+		  case 0x02:
+      {
+				
+				
+				
+			  break;
+			}
+			case 0x03:
+      {
+				
+				
+				
+			  break;
+			}
+			
+			case 0x04:
+      {
+				
+				
+				
+			  break;
+			}
+		
+		
+		
+		
+		
+		
+	 }  
+  } 
+}	
  
 
 #endif

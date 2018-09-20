@@ -27,185 +27,38 @@ Project File Date:  09/16/2018
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LED'
-compiling usart3_dma.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(5): warning:  #1295-D: Deprecated declaration USART3_Sensor_Init - give arg types
-  void USART3_Sensor_Init();
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart3_DMA\usart3_dma.c: 3 warnings, 0 errors
 compiling usart1_dma.c...
 ..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
   #endif
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Sensor_Init - give arg types
+  void USART2_Sensor_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration BP_Measurement_Start - give arg types
+  void BP_Measurement_Start();  //MASTER 成人BP测量
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(12): warning:  #1295-D: Deprecated declaration BP_Measurement_Stop - give arg types
+  void BP_Measurement_Stop();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(13): warning:  #1295-D: Deprecated declaration Get_BP_Measurement_Result - give arg types
+  void Get_BP_Measurement_Result();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(14): warning:  #1295-D: Deprecated declaration Get_BP_Cuff_Pressure - give arg types
+  void Get_BP_Cuff_Pressure();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(15): warning:  #1295-D: Deprecated declaration BP_Cuff_Start - give arg types
+  void BP_Cuff_Start();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(17): warning:  #1295-D: Deprecated declaration BP_Reset - give arg types
+  void BP_Reset();  //复位模块处理器
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration BP_Status - give arg types
+  void BP_Status(); //模块状态监测
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart1_DMA\usart1_dma.c(220): warning:  #223-D: function "USART1_Flag" declared implicitly
+  		USART_RECEIVE_MODE=USART1_Flag(&USART1_RECEIVE_DATA[0]);
+..\HARDWARE\Usart1_DMA\usart1_dma.c(224): warning:  #223-D: function "BP_Measurement" declared implicitly
+  				switch (BP_Measurement(&USART1_RECEIVE_DATA[0]))
 ..\HARDWARE\Usart1_DMA\usart1_dma.c(20): warning:  #550-D: variable "USART1_TX_BUSY"  was set but never used
   static u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
-..\HARDWARE\Usart1_DMA\usart1_dma.c: 2 warnings, 0 errors
-compiling key.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(7): warning:  #1295-D: Deprecated declaration USART1_Key_Init - give arg types
-  void USART1_Key_Init(); //按键传输协议初始化
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(10): warning:  #1295-D: Deprecated declaration KEY0_Response - give arg types
-  void KEY0_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(13): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
-  void KEY1_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(28): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
-  void KEY6_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(31): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
-  void KEY7_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
-  void SPO2_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Key\key.c(249): warning:  #223-D: function "KEY3_Response" declared implicitly
-  		KEY3_Response();	
-..\HARDWARE\Key\key.c(263): warning:  #223-D: function "KEY4_Response" declared implicitly
-  		KEY4_Response();	
-..\HARDWARE\Key\key.c(278): warning:  #223-D: function "KEY5_Response" declared implicitly
-  		KEY5_Response();	
-..\HARDWARE\Key\key.c: 11 warnings, 0 errors
-compiling main.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Motor_Control\motor_control.h(6): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
-  void Motor_Init();
-..\HARDWARE\Motor_Control\motor_control.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(7): warning:  #1295-D: Deprecated declaration USART1_Key_Init - give arg types
-  void USART1_Key_Init(); //按键传输协议初始化
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(10): warning:  #1295-D: Deprecated declaration KEY0_Response - give arg types
-  void KEY0_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(13): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
-  void KEY1_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(28): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
-  void KEY6_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(31): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
-  void KEY7_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
-  void SPO2_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Sensor_Init - give arg types
-  void USART2_Sensor_Init();
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration BP_Measurement - give arg types
-  void BP_Measurement();  //MASTER 成人BP测量
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(5): warning:  #1295-D: Deprecated declaration USART3_Sensor_Init - give arg types
-  void USART3_Sensor_Init();
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-main.c(34): warning:  #223-D: function "USART3_DMA_Init" declared implicitly
-    USART3_DMA_Init(USART3_BaudRate);	
-main.c: 16 warnings, 0 errors
-compiling usart1_protocol.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(7): warning:  #1295-D: Deprecated declaration USART1_Key_Init - give arg types
-  void USART1_Key_Init(); //按键传输协议初始化
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(10): warning:  #1295-D: Deprecated declaration KEY0_Response - give arg types
-  void KEY0_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(13): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
-  void KEY1_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(28): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
-  void KEY6_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(31): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
-  void KEY7_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
-  void SPO2_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\CRC_16\crc_16.h(8): warning:  #1295-D: Deprecated declaration Get_ucCRCHi - give arg types
-  u8 Get_ucCRCHi();//获取高8位
-..\HARDWARE\CRC_16\crc_16.h(9): warning:  #1295-D: Deprecated declaration Get_ucCRCLo - give arg types
-  u8 Get_ucCRCLo();//获取低8位
-..\HARDWARE\Usart1_Protocol\usart1_protocol.c: 10 warnings, 0 errors
-compiling pwm.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
-  #ifdef USE_PWM_CH1 || USE_PWM_CH2 ||USE_PWM_CH3 ||USE_PWM_CH4
-..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
-  void PWM_Init_Default();
-..\HARDWARE\PWM\pwm.c(118): warning:  #14-D: extra text after expected end of preprocessing directive
-  #ifdef USE_PWM_CH1 || USE_PWM_CH2 ||USE_PWM_CH3 ||USE_PWM_CH4
-..\HARDWARE\PWM\pwm.c: 4 warnings, 0 errors
-compiling usart2_dma.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_DMA\usart2_dma.c: 1 warning, 0 errors
-compiling usart3_protocol.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(5): warning:  #1295-D: Deprecated declaration USART3_Sensor_Init - give arg types
-  void USART3_Sensor_Init();
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart3_Protocol\usart3_protocol.c: 3 warnings, 0 errors
-compiling motor_control.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Motor_Control\motor_control.h(6): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
-  void Motor_Init();
-..\HARDWARE\Motor_Control\motor_control.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
-  #ifdef USE_PWM_CH1 || USE_PWM_CH2 ||USE_PWM_CH3 ||USE_PWM_CH4
-..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
-  void PWM_Init_Default();
-..\HARDWARE\Motor_Control\motor_control.c(24): warning:  #223-D: function "Motor_GPIO_Init" declared implicitly
-  	Motor_GPIO_Init();
-..\HARDWARE\Motor_Control\motor_control.c(95): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Motor_Control\motor_control.c: 7 warnings, 0 errors
-compiling usart2_protocol.c...
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Sensor_Init - give arg types
-  void USART2_Sensor_Init();
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration BP_Measurement - give arg types
-  void BP_Measurement();  //MASTER 成人BP测量
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Checkout\usart2_checkout.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(54): error:  #101: "u8" has already been declared in the current scope
-  u8 Is_O_Packet(u8 *USART_RECEIVE_DATA)
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(54): error:  #70: incomplete type is not allowed
-  u8 Is_O_Packet(u8 *USART_RECEIVE_DATA)
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(54): error:  #65: expected a ";"
-  u8 Is_O_Packet(u8 *USART_RECEIVE_DATA)
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(108): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(108): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c(34): warning:  #177-D: variable "BP_RECEIVE_DATA"  was declared but never referenced
-  static u8 BP_RECEIVE_DATA[BP_DATA_LEN];
-..\HARDWARE\Usart2_Protocol\usart2_protocol.c: 8 warnings, 3 errors
-compiling usart2_checkout.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Checkout\usart2_checkout.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Checkout\usart2_checkout.c(34): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\Usart2_Checkout\usart2_checkout.c: 3 warnings, 0 errors
-compiling gpio.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\GPIO\gpio.h(15): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\GPIO\gpio.c(62): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\GPIO\gpio.c: 3 warnings, 0 errors
-compiling crc_16.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\CRC_16\crc_16.h(8): warning:  #1295-D: Deprecated declaration Get_ucCRCHi - give arg types
-  u8 Get_ucCRCHi();//获取高8位
-..\HARDWARE\CRC_16\crc_16.c: 3 warnings, 0 errors
-  u8 Get_ucCRCLo();//获取低8位
-"..\OBJ\STM32_Project.axf" - 3 Error(s), 73 Warning(s).
+..\HARDWARE\Usart1_DMA\usart1_dma.c: 13 warnings, 0 errors
+linking...
+Program Size: Code=13880 RO-data=848 RW-data=68 ZI-data=2756  
+FromELF: creating hex file...
+"..\OBJ\STM32_Project.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -219,8 +72,7 @@ Package Vendor: Keil
   D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

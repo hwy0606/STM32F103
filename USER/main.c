@@ -46,7 +46,7 @@
   
  USART1_DMA_Send_Once_Data(Send_Date,Send_Size);
  
- BP_Measurement();
+
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新

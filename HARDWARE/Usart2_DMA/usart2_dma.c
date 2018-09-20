@@ -11,14 +11,15 @@
 #include <string.h> 	  
 #include "delay.h"
 #include "project_config.h"
-
+#include "usart2_protocol.h"
+#include "usart1_protocol.h"
 /*private*/
 static u8 USART2_SEND_DATA[USART2_DATA_LEN];  
 static u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
 static u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart2_buffer uart2_rx,uart2_tx;
-	  
+extern u8 USART_RECEIVE_MODE;	  
 
 /**
 * @Description: UART2_DMA初始化
@@ -208,10 +209,45 @@ void USART2_IRQHandler(void)
 	{ 
     	uart2_rx.len = USART2_RX_Finish_IRQ(uart2_rx.buf);	
      /* 用户处理函数 */ 
-     
+     switch (USART_RECEIVE_MODE)
+			 {
+			case 0x01: //开始成人模式BP
+      {
+				//此时应该收到O包或者B包 
+				if(Is_O_Packet(&USART2_RECEIVE_DATA[0]))
+				{
+					//利用串口1发送O包给MASTER 
+					BP_O_response();
+				}
+				
+				if(Is_B_Packet(&USART2_RECEIVE_DATA[0]))
+				{
+					//利用串口1发送O包给MASTER 
+					BP_Busy_response();
+				}
+				
+				
+				
+			  break;
+			}
+		  case 0x02:
+      {
+				
+				
+				
+			  break;
+			}
+			case 0x03:
+      {
+				
+				
+				
+			  break;
+			}
 		
-	}  
-}  
+	  }  
+ } 
+}	
  
 #endif
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

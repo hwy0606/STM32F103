@@ -33,3 +33,5 @@
 ..\obj\usart2_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\usart2_dma.o: ..\SYSTEM\delay\delay.h
 ..\obj\usart2_dma.o: ..\USER\project_config.h
+..\obj\usart2_dma.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h
+..\obj\usart2_dma.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h

@@ -44,7 +44,7 @@ void USART2_Sensor_Init()
 
 
 /*开始成人BP测量 */
-void BP_Measurement_Start()  
+void BP_Measurement_Start()   //成人BP测量 0x20指令
 {
 	u8 BP_Measurement_LEN =3;
 	BP_SEND_DATA[1]=0X20;
@@ -52,7 +52,7 @@ void BP_Measurement_Start()
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }
 /*中止当前测量 */
-void BP_Measurement_Stop()
+void BP_Measurement_Stop()   //获得上一次BP测量结果  0x79 0x01 0x00指令
 {
 	u8 BP_Measurement_LEN =5;
 	BP_SEND_DATA [1]=0X79;
@@ -62,7 +62,7 @@ void BP_Measurement_Stop()
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }	
 /*获得上一次BP测量结果*/
-void Get_BP_Measurement_Result()
+void Get_BP_Measurement_Result()  //获得上一次BP测量结果  0x79 0x03 0x00指令
 {
 	u8 BP_Measurement_LEN =5;
 	BP_SEND_DATA [1]=0X79;
@@ -72,7 +72,7 @@ void Get_BP_Measurement_Result()
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }
 /*获得当前袖带压力*/
-void Get_BP_Cuff_Pressure()
+void Get_BP_Cuff_Pressure()  //获得当前袖带压力 0x79 0x05 0x00指令
 {
 	u8 BP_Measurement_LEN =5;
 	BP_SEND_DATA [1]=0X79;
@@ -82,7 +82,7 @@ void Get_BP_Cuff_Pressure()
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }
 
-void BP_Cuff_Start()  
+void BP_Cuff_Start()   //带袖带压力和数据报告开始成人模式BP 0x56指令 
 {
 	u8 BP_Measurement_LEN =3;
 	BP_SEND_DATA[1]=0X56;
@@ -90,7 +90,7 @@ void BP_Cuff_Start()
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }
 
-u8 BP_Sleep_Mode(u8 SleepMode) // 0X01进入休眠模式 0X00退出休眠模式
+u8 BP_Sleep_Mode(u8 SleepMode) // 0X01进入休眠模式 0X00退出休眠模式  0x81指令
 {
 	u8 BP_Measurement_LEN =7;
 	BP_SEND_DATA [1]=0X81;
@@ -102,7 +102,21 @@ u8 BP_Sleep_Mode(u8 SleepMode) // 0X01进入休眠模式 0X00退出休眠模式
 	USART2_DMA_Send_Once_Data(BP_SEND_DATA,BP_Measurement_LEN);
 }
 
+void BP_Reset()  //复位模块处理器
+{
+	u8 BP_Measurement_LEN =3;
+	BP_SEND_DATA [1]=0X8A;
+	BP_SEND_DATA [2]=0X3C;
+}
 
+void BP_Status() //模块状态监测
+{
+	u8 BP_Measurement_LEN =5;
+	BP_SEND_DATA [1]=0X79;
+	BP_SEND_DATA [2]=0X11;
+	BP_SEND_DATA [2]=0X00;
+	BP_SEND_DATA [2]=0X3C;
+}
 /*从机指令检测*/
 /*检测是否为O-packet */
 u8 Is_O_Packet(u8 *USART_RECEIVE_DATA)
@@ -160,7 +174,7 @@ u8 Is_B_Packet(u8 *USART_RECEIVE_DATA)
 	}
 	return 0;
 }
-
+/*检测是否为A-packet */
 u8 Is_A_Packet(u8 *USART_RECEIVE_DATA)
 {
 	if((unsigned short)USART_RECEIVE_DATA[3]==0x7D) //检测校验和
@@ -178,7 +192,7 @@ u8 Is_A_Packet(u8 *USART_RECEIVE_DATA)
 	}
 	return 0;
 }
-
+/*检测是否为S-packet */
 u8 Is_S_Packet(u8 *USART_RECEIVE_DATA)
 {
 	if((unsigned short)USART_RECEIVE_DATA[3]==0x6B) //检测校验和
@@ -196,3 +210,4 @@ u8 Is_S_Packet(u8 *USART_RECEIVE_DATA)
 	}
 	return 0;
 }
+
