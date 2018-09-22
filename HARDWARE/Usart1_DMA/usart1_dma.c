@@ -223,9 +223,10 @@ void USART1_IRQHandler(void)
 			BP_Order_USART2(&USART1_RECEIVE_DATA[0]);
 		}
 		
-		
-		
-		
+		if(Is_Speed_Order(&USART1_RECEIVE_DATA[0])) 
+		{
+			Speed_Response();
+		}
 	}  
 }  
  

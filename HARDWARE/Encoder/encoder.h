@@ -2,10 +2,10 @@
 #define __ENCODER_H	
 
 							   
-void Encoder_Init(void);
+void Hall_Senor_Init(void);
 void Timer2_init(void);
-void Timer3_init(void);
-void Get_Motor_Speed(void);
+void PA0_IPD_Init(void);
+
 
 
 #endif 

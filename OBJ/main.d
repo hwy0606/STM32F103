@@ -34,6 +34,8 @@
 ..\obj\main.o: ..\HARDWARE\Usart1_DMA\usart1_dma.h
 ..\obj\main.o: ..\HARDWARE\Usart2_DMA\usart2_dma.h
 ..\obj\main.o: ..\HARDWARE\Usart3_DMA\usart3_dma.h
+..\obj\main.o: ..\HARDWARE\PWM\pwm.h
+..\obj\main.o: ..\USER\project_config.h
 ..\obj\main.o: ..\HARDWARE\Key\key.h
 ..\obj\main.o: ..\HARDWARE\Motor_Control\motor_control.h
 ..\obj\main.o: ..\USER\project_config.h
@@ -42,3 +44,4 @@
 ..\obj\main.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h
 ..\obj\main.o: ..\HARDWARE\Usart3_Protocol\usart3_protocol.h
 ..\obj\main.o: ..\USER\project_config.h
+..\obj\main.o: ..\HARDWARE\Encoder\encoder.h

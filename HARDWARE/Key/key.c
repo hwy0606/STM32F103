@@ -25,22 +25,7 @@ void KEY_Init(void)
 //	//PB3 PB4 默认为JTAG输出引脚
 //	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE); 
 
-	#ifdef USE_PA0_KEY
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 ;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;//下拉输入模式 
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
-	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,GPIO_PinSource0);
-  EXTI_InitStructure.EXTI_Line=EXTI_Line0;
-  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
-  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-  EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
-	NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
-  NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
-	#endif
+
 	
 	#ifdef USE_PA1_KEY
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 ;
@@ -198,18 +183,7 @@ void KEY_Init(void)
 	
 } 
 
-#ifdef USE_PA0_KEY
-void EXTI0_IRQHandler(void)
-{
-  delay_ms(2);    //消抖
-	if(EXTI_GetITStatus(EXTI_Line0)!=RESET)
-	{	  
-		//接用户操作函数
-		KEY0_Response();
-	}
-	EXTI_ClearITPendingBit(EXTI_Line0);  //清除EXTI0线路挂起位
-}
-#endif
+
 
 #ifdef USE_PA1_KEY
 void EXTI1_IRQHandler(void)

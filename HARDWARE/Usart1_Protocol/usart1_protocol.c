@@ -33,18 +33,6 @@ void USART1_Key_Init()
 	Send_Date_Key[5]=0x00; //CRC校验码高8位
 }
 
-#ifdef USE_PA0_KEY
-inline void KEY0_Response()
-{
-	Send_Date_Key[3]=0x00; //有效数据
-	//启动CRC校验
-	usMBCRC16(Send_Date_Key,Send_Size_Key-2);
-	Send_Date_Key[4]=Get_ucCRCLo(); //CRC校验码低8位
-	Send_Date_Key[5]=Get_ucCRCHi(); //CRC校验码高8位
-	//启动传输
-	USART1_DMA_Send_Once_Data(Send_Date_Key,Send_Size_Key);	
-}
-#endif
 
 #ifdef USE_PA1_KEY
 inline void KEY1_Response()
@@ -179,8 +167,6 @@ u8 Is_BP_Order(u8 *USART_RECEIVE_DATA) //判断是不是血压指令 帧头和0x02数据类型码
 	return 0;
 }
 /*将串口2收到的数据 原封不动的通过串口1发送回去 */
-
-
 extern u8 USART2_BP_DATA[32];
 
 void USART1_BP_Response(u8 *USART1_RECEIVE_DATA,u16 DATA_LEN)
@@ -204,7 +190,7 @@ void USART1_BP_Response(u8 *USART1_RECEIVE_DATA,u16 DATA_LEN)
 /*数据长度 0x0A*/
 /*数据类型码 0x03*/
 extern u8 SPO2_DATA[SPO2_DATA_LEN]; //直接用全局变量 不做传址
-extern u8 SPO2_FLAG;
+extern u8 SPO2_FLAG; //血氧信息更新标志位
 void SPO2_Response()
 { 
 	//此处做一个CRC校验然后发送，发送完成后复位SPO2_FLAG标志位
@@ -215,4 +201,38 @@ void SPO2_Response()
 	USART1_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
 	USART1_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
   SPO2_FLAG=0;	
+}
+
+/*第四部分 速度通信协议*/
+/*数据长度 0x0A*/ 
+/*有效数据 2位 */
+/*数据类型码 0x04*/
+extern float motor_speed;//速度
+u8 SPEED_DATA[SPEED_DATA_LEN];
+void USART1_Speed_Init()
+{
+	SPEED_DATA[0]=0x5A;
+	SPEED_DATA[1]=SPEED_DATA_LEN;	
+	SPEED_DATA[2]=0x04;
+	
+}
+void Speed_Response()
+{
+	SPEED_DATA[3]=(unsigned char)(((u16)(motor_speed) & 0xFF00)>>8);	
+	SPEED_DATA[4]=(unsigned char)(u16)(motor_speed)&0x00FF;
+	usMBCRC16(SPEED_DATA,SPEED_DATA_LEN-2);
+  SPEED_DATA[5]=Get_ucCRCLo();//CRC校验码低8位
+	SPEED_DATA[6]=Get_ucCRCHi(); //CRC校验码高8位
+	USART1_DMA_Send_Once_Data(SPEED_DATA,SPEED_DATA_LEN);	
+}
+u8 Is_Speed_Order(u8 *USART_RECEIVE_DATA) //判断是不是速度指令 帧头和0x02数据类型码 不做CRC校验了
+{
+	if(((unsigned short)USART_RECEIVE_DATA[2]==0X04)) //数据类型码
+	{
+	if(((unsigned short)USART_RECEIVE_DATA[0]==0XA5))
+	{
+		return 1;
+	}
+	}
+	return 0;
 }

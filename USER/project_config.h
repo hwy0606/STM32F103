@@ -66,6 +66,11 @@
 #define PWM_ARR  (72000/PWM_Frequency)-1
 #define PWM_PSC 0 //不分频
 
+//500HZ频率测试
+
+//#define PWM_ARR  20000-1
+//#define PWM_PSC  10000-1
+
 //CRC校验方法 默认只能定义一种 可使用硬件CRC 或者 查表法软件CRC
 
 //ps: 目前只写了软件CRC方法 硬件CRC暂时不可用
@@ -73,7 +78,7 @@
 #define USE_CRC_SOFTWARE
 
 //按键8个 预留两个 总共驱动10个按键引脚
-#define USE_PA0_KEY
+
 #define USE_PA1_KEY
 //#define USE_PD2_KEY 
 #define USE_PC3_KEY
@@ -81,7 +86,7 @@
 #define USE_PC5_KEY
 #define USE_PC6_KEY
 #define USE_PC7_KEY
-//#define USE_PC8_KEY
+#define USE_PC8_KEY
 //#define USE_PC9_KEY
 
 //GPIO 4+3
@@ -97,10 +102,10 @@
 #define  MOTOR_GPIO_PB14 GPIO_Pin_14
 #define  MOTOR_GPIO_PB15 GPIO_Pin_15
 #define  MOTOR_GPIO         GPIOB
-#define MOTOR1_IN1 PBout(12)	// PB12
-#define MOTOR1_IN2 PBout(13)	// PB13
-#define MOTOR2_IN1 PBout(14)	// PB14
-#define MOTOR2_IN2 PBout(15)	// PB15
+#define  MOTOR1_IN1 PBout(12)	// PB12
+#define  MOTOR1_IN2 PBout(13)	// PB13
+#define  MOTOR2_IN1 PBout(14)	// PB14
+#define  MOTOR2_IN2 PBout(15)	// PB15
 #endif
 
 #ifdef USE_LED_GPIO
@@ -135,3 +140,8 @@
 #define SPO2_DATA_LEN 10
 
 
+//Hall_Sensor
+#define USE_PA0_HALL_IPD
+#define HALL_MAGNET_AMOUNT 3
+#define HALL_SPEED_CONST 60*10000/HALL_MAGNET_AMOUNT
+#define SPEED_DATA_LEN  0x07

@@ -465,6 +465,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\Usart2_Protocol\usart2_protocol.c</FilePath>
             </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Encoder\encoder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

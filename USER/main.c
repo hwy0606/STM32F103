@@ -4,11 +4,14 @@
 #include "usart1_dma.h"
 #include "usart2_dma.h"
 #include "usart3_dma.h"
+#include "pwm.h"
 #include "key.h"
 #include "motor_control.h"
 #include "usart1_protocol.h"
 #include "usart2_protocol.h"
 #include "usart3_protocol.h"
+#include "encoder.h"
+#include "stm32f10x_tim.h"
 /*
 注释
 */
@@ -19,8 +22,9 @@
 	LED_Init();	
 	KEY_Init(); 
 	USART1_Key_Init();
+	USART1_Speed_Init();
 	USART3_Sensor_Init();
-	 
+	
 	
 	Motor_Init(); 
 	 
@@ -43,11 +47,13 @@
   TEST_LED0=1;
 	TEST_LED1=1;
   
- USART1_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口1
+  USART1_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口1
   
- 
- 
- 
+  Hall_Senor_Init();
+  PWM_Init_Default();
+  Set_PWM_CH1_Duty_Cycle(30);
+//  TIM_SetCompare1(TIM4,10000/2);
+  
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新
@@ -55,6 +61,7 @@
 		{
 			SPO2_Response();
 		}
+
 	}
  }
 

@@ -41,5 +41,9 @@ void USART1_BP_Response(u8 *USART1_RECEIVE_DATA,u16 DATA_LEN);
 u8 Is_BP_Order(u8 *USART_RECEIVE_DATA); 
 
 void SPO2_Response();
+void USART1_Speed_Init();
+void Speed_Response();
+
+u8 Is_Speed_Order(u8 *USART_RECEIVE_DATA);
 
 #endif
