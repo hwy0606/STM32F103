@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections --asm --interleave --asm_dir ".\\list\\" -I .\FWlib\inc -I .\user -I .\CM3
+-IC:\Users\Administrator\Desktop\奋斗STM32开发板V5+5寸(SSD1963)屏例程\奋斗STM32开发板V5+5寸(SSD1963)屏例程\适用V5板的基础例程\STM32奋斗板-ADC\RTE
+-IC:\Keil_v5-2016-9-8\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+-IC:\Keil_v5-2016-9-8\ARM\CMSIS\Include
+-D__UVISION_VERSION="521" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\obj\stm32f10x_rtc.o --list_dir ".\\list\\" --list --omf_browse .\obj\stm32f10x_rtc.crf --depend .\obj\stm32f10x_rtc.d --feedback ".\obj\STM32-FD-ADC_Uv2.fed" "FWlib\SRC\stm32f10x_rtc.c"

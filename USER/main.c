@@ -18,6 +18,8 @@
  extern u8 SPO2_FLAG;
  int main(void)
  { 
+	 
+	SCB->VTOR = FLASH_BASE | 0x10000; /* Vector Table Relocation in Internal FLASH. */	 
 	delay_init();	    	 	  
 	LED_Init();	
 	KEY_Init(); 
@@ -53,7 +55,10 @@
   PWM_Init_Default();
   Set_PWM_CH1_Duty_Cycle(30);
 //  TIM_SetCompare1(TIM4,10000/2);
-  
+  delay_ms(1000);
+	delay_ms(1000);
+	delay_ms(1000);
+	USART1_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口1
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新
@@ -61,7 +66,6 @@
 		{
 			SPO2_Response();
 		}
-
 	}
  }
 

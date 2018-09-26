@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections --asm --interleave --asm_dir ".\\list\\" -I .\FWlib\inc -I .\user -I .\CM3
+-I.\RTE\_STM32-FD-ADC
+-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+-ID:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="525" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\obj\core_cm3.o --list_dir ".\\list\\" --list --omf_browse .\obj\core_cm3.crf --depend .\obj\core_cm3.d --feedback ".\obj\ADC.fed" "CM3\core_cm3.c"

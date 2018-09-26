@@ -22,17 +22,11 @@ Dialog DLL:        TARMSTM.DLL
  
 <h2>Project:</h2>
 F:\STM32 Project\USER\LED.uvprojx
-Project File Date:  09/20/2018
+Project File Date:  09/26/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LED'
-compiling encoder.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #define SPEED_DATA_LEN  0x07
-..\HARDWARE\Encoder\encoder.c(81): warning:  #177-D: variable "NVIC_InitStructure"  was declared but never referenced
-  	  NVIC_InitTypeDef  NVIC_InitStructure;
-..\HARDWARE\Encoder\encoder.c: 2 warnings, 0 errors
 compiling main.c...
 ..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
   #define SPEED_DATA_LEN  0x07
@@ -74,39 +68,14 @@ compiling main.c...
   void USART3_Sensor_Init();
 ..\HARDWARE\Usart3_Protocol\usart3_protocol.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(37): warning:  #223-D: function "USART3_DMA_Init" declared implicitly
+main.c(39): warning:  #223-D: function "USART3_DMA_Init" declared implicitly
     USART3_DMA_Init(USART3_BaudRate);	
 main.c: 21 warnings, 0 errors
-compiling usart1_dma.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #define SPEED_DATA_LEN  0x07
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
-  #define SPEED_DATA_LEN  0x07
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(7): warning:  #1295-D: Deprecated declaration USART1_Key_Init - give arg types
-  void USART1_Key_Init(); //按键传输协议初始化
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(13): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
-  void KEY1_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(28): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
-  void KEY6_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(31): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
-  void KEY7_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(34): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
-  void KEY8_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(43): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
-  void SPO2_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(44): warning:  #1295-D: Deprecated declaration USART1_Speed_Init - give arg types
-  void USART1_Speed_Init();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(45): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
-  void Speed_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(49): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\HARDWARE\Usart1_DMA\usart1_dma.c: 12 warnings, 0 errors
+compiling led.c...
 linking...
-Program Size: Code=13776 RO-data=848 RW-data=88 ZI-data=2736  
+Program Size: Code=13820 RO-data=848 RW-data=88 ZI-data=2736  
 FromELF: creating hex file...
-"..\OBJ\STM32_Project.axf" - 0 Error(s), 35 Warning(s).
+"..\OBJ\STM32_Project.axf" - 0 Error(s), 21 Warning(s).
 
 <h2>Software Packages used:</h2>
 

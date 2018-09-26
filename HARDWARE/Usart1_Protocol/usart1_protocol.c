@@ -204,7 +204,7 @@ void SPO2_Response()
 }
 
 /*第四部分 速度通信协议*/
-/*数据长度 0x0A*/ 
+/*数据长度 0x07*/ 
 /*有效数据 2位 */
 /*数据类型码 0x04*/
 extern float motor_speed;//速度
