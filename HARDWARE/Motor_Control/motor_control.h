@@ -3,17 +3,19 @@
 #include "sys.h"
 #include "project_config.h"
 
-void Motor_Init();
-#ifdef USE_MOTOR_CONTROL1
-void Motor1_Break(void);
-void Motor1_Positive(int Duty_Cycle); //占空比给1-100
-void Motor1_Negative(int Duty_Cycle); //占空比给1-100
+#if defined (USE_ACTUATOR_CONTROL)  && defined(USE_PWM_CH3) && defined(USE_ACTUATOR_GPIO)
+void Actuator_Init();
+void Actuator_Break(void);
+void Actuator_Positive(int Duty_Cycle); //占空比给1-100
+void Actuator_Negative(int Duty_Cycle); //占空比给1-100
 #endif
 
-#ifdef USE_MOTOR_CONTROL2
-void Motor2_Break(void);
-void Motor2_Positive(int Duty_Cycle); //占空比给1-100
-void Motor2_Negative(int Duty_Cycle); //占空比给1-100
+#if defined (USE_BACKUP_CONTROL)  && defined(USE_PWM_CH4) && defined(USE_BACKUP_GPIO)
+void Backup_Init();
+void Backup_Break(void);
+void Backup_Positive(int Duty_Cycle); //占空比给1-100
+void Backup_Negative(int Duty_Cycle); //占空比给1-100
+
 #endif
 		 				    
 #endif

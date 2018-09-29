@@ -16,46 +16,34 @@ IN1 IN2 PWM 输出
  1   0  PWM 正转
  0   1  PWM 反转
 */ 
-/*
-相关引脚 IN1-MOTOR1_IN1-PB12 IN2-MOTOR1_IN2-PB13
-         PWM-PWM_CH1_GPIO-PB6
-*/
 
 /*请支持C99标准 */
 #if defined (USE_ACTUATOR_CONTROL)  && defined(USE_PWM_CH3) && defined(USE_ACTUATOR_GPIO)
-void Motor_Init()
+void Actuator_Init()
 {
-	Motor_GPIO_Init();
+	ACTUATOR_GPIO_Init();
 	PWM_Init_Default();
 }
-#endif 
 
-#ifdef USE_MOTOR_CONTROL1
-void BackUp_Init()
+void Actuator_Break(void)
 {
-	
-}
-#endif 
-#ifdef USE_MOTOR_CONTROL1
-void Motor1_Break(void)
-{
-  MOTOR1_IN1=0;
-	MOTOR1_IN2=0;
+  ACTUATOR_IN1=0;
+	ACTUATOR_IN2=0;
 	Set_PWM_CH3_Duty_Cycle(5);//占空比随机		
 	
 }
 
-void Motor1_Positive(int Duty_Cycle) //占空比给1-100
+void Actuator_Positive(int Duty_Cycle) //占空比给1-100
 {
-  MOTOR1_IN1=1;
-	MOTOR1_IN2=0;
+  ACTUATOR_IN1=1;
+	ACTUATOR_IN2=0;
 	Set_PWM_CH3_Duty_Cycle(Duty_Cycle);
 }
 
-void Motor1_Negative(int Duty_Cycle) //占空比给1-100
+void Actuator_Negative(int Duty_Cycle) //占空比给1-100
 {
-  MOTOR1_IN1=0;
-	MOTOR1_IN2=1;
+  ACTUATOR_IN1=0;
+	ACTUATOR_IN2=1;
 	Set_PWM_CH3_Duty_Cycle(Duty_Cycle);
 }
 #endif
@@ -68,30 +56,33 @@ IN1 IN2 PWM 输出
  1   0  PWM 正转
  0   1  PWM 反转
 */ 
-/*
-相关引脚 IN2-MOTOR2_IN1-PB14 IN2-MOTOR2_IN2-PB15
-         PWM-PWM_CH2_GPIO-PB7
-*/
-#ifdef USE_MOTOR_CONTROL2
-void Motor2_Break(void)
+
+
+#if defined (USE_BACKUP_CONTROL)  && defined(USE_PWM_CH4) && defined(USE_BACKUP_GPIO)
+void Backup_Init()
 {
-  MOTOR2_IN1=0;
-	MOTOR2_IN2=0;
+	BACKUP_GPIO_Init();
+	PWM_Init_Default();
+}
+void Backup_Break(void)
+{
+  BACKUP_IN1=0;
+	BACKUP_IN2=0;
 	Set_PWM_CH4_Duty_Cycle(5);//占空比随机		
 	
 }
 
-void Motor2_Positive(int Duty_Cycle) //占空比给1-100
+void Backup_Positive(int Duty_Cycle) //占空比给1-100
 {
-  MOTOR2_IN1=1;
-	MOTOR2_IN2=0;
+  BACKUP_IN1=1;
+	BACKUP_IN2=0;
 	Set_PWM_CH4_Duty_Cycle(Duty_Cycle);
 }
 
-void Motor2_Negative(int Duty_Cycle) //占空比给1-100
+void Backup_Negative(int Duty_Cycle) //占空比给1-100
 {
-  MOTOR2_IN1=0;
-	MOTOR2_IN2=1;
+  BACKUP_IN1=0;
+	BACKUP_IN2=1;
 	Set_PWM_CH4_Duty_Cycle(Duty_Cycle);
 }
 

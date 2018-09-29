@@ -184,24 +184,15 @@
 #define  OE_GPIO         GPIOC
 #define  OE PCout(2)	// PC2
 #endif
-//数码管  SPI
-
 
 //电机控制板驱动
 #define USE_ACTUATOR_CONTROL
-
 #define USE_BACKUP_CONTROL
-
-
-
-
 
 //上位机通信 USART1_PROTOCOL
 /* 第一部分按键信号由按键中断直接发送*/
-
-/* 第三部分血氧信息放在主循环中空闲时发送，更新频率1HZ，实际每次更新后连续发送两遍*/ 
-
-//血氧模块   USARAT3_PROTOCOL
+/* 第三部分血氧信息放在主循环中空闲时发送，更新频率1HZ，实际每次更新发送*/ 
+//血氧模块   USARAT5_PROTOCOL
 /* */
 #define SPO2_DATA_LEN 10
 
@@ -211,3 +202,40 @@
 #define HALL_MAGNET_AMOUNT 3
 #define HALL_SPEED_CONST 60*10000/HALL_MAGNET_AMOUNT
 #define SPEED_DATA_LEN  0x07
+
+//ADC 转矩输入
+/*注意选择采样时间 牺牲转换速率 */
+/*可供选择采样时间 55.5 71.5 239.5 */
+#define USE_PA0_ADC1_IN0
+#define ADC_RCC RCC_APB2Periph_GPIOA | RCC_APB2Periph_ADC1 
+#define DMA_RCC RCC_AHBPeriph_DMA1
+#define ADC_GPIO_PA0 GPIO_Pin_0
+#define ADC_GPIO GPIOA
+#define ADC_BUFx_LEN		      7
+#define ADC_BUF_LEN         1*ADC_BUFx_LEN 		
+
+//数码管  SPI 7277芯片
+/*   BC727X驱动使用SPI2口      */
+/*   PB12 --- CS                */
+/*   PB13 --- SCK               */
+/*   PB14 --- MISO              */
+/*   PB15 --- MOSI              */
+
+/* BC727X 指令（寄存器地址）*/
+#define SEG_BLINK_CTL       0x10    // 断闪烁控制寄存器起始地址
+#define DIG_BLINK_CTL_L     0x18    // 0-7位闪烁控制寄存器起始地址
+#define DIG_BLINK_CTL_H     0x19    // 8-15位闪烁控制寄存器起始地址
+#define BLINK_SPEED         0x1A    // 闪烁速度控制寄存器地址
+#define DECODE_HEX          0x1b    // 16进制显示译码寄存器地址
+#define DECODE_SEG          0x1c    // 段寻址译码寄存器地址
+#define WRITE_ALL           0x1d    // 全局操作寄存器地址
+#define DUMMY_CMD           0xff    // 假指令
+
+#define USE_SPI_7277
+#define SPI_GPIO_RCC  RCC_APB2Periph_GPIOB
+#define SPI_RCC RCC_APB1Periph_SPI2
+#define SPI_GPIO GPIOB
+#define SPI_CS GPIO_Pin_12
+#define SPI_SCK GPIO_Pin_13
+#define SPI_MISO GPIO_Pin_14
+#define SPI_MOSI GPIO_Pin_15

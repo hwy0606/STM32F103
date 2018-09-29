@@ -13,6 +13,8 @@
 #include "usart5_protocol.h"
 #include "encoder.h"
 #include "rcc.h"
+#include "adc.h"
+#include "spi.h"
 /*
 注释
 */
@@ -42,23 +44,25 @@
 	USART2_DMA_Init(USART2_BaudRate);		
   USART3_DMA_Init(USART3_BaudRate);	
 	UART5_Init(USART5_BaudRate);
+	ADC_Sensor_Init();
+	 
 	 
 	u16 Send_Size =5;
 	u8 Send_Date[Send_Size];
-	Send_Date[0]=0x00;
-	Send_Date[1]=0x01;
-	Send_Date[2]=0x02;
+	Send_Date[0]=0x01;
+	Send_Date[1]=0x03;
+	Send_Date[2]=0x0C;
 	Send_Date[3]=0x0D;
 	Send_Date[4]=0x0A;	 
-
+	SPI2_Init();
   Hall_Senor_Init();
-  PWM_Init_Default();
-  Set_PWM_CH4_Duty_Cycle(30);
+//  PWM_Init_Default();
+//  Set_PWM_CH4_Duty_Cycle(30);
 //  delay_ms(1000);
 	USART3_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口3
 
 //  UART5_Send_Once_Data(Send_Date,Send_Size); 
-	USART2_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口2
+//	USART2_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口2
 	while(1)
 	{
 		//循环检测血氧信息是否需要更新

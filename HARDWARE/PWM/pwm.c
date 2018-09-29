@@ -64,8 +64,8 @@ void PWM_Init(u16 arr,u16 psc)
 #endif
 }
 
-
-#ifdef USE_PWM_CH3 ||USE_PWM_CH4
+/*请支持C99标准 */
+#if defined (USE_PWM_CH3) || defined (USE_PWM_CH4)
 
 void PWM_Init_Default()
 {

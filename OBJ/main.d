@@ -51,3 +51,6 @@
 ..\obj\main.o: ..\USER\project_config.h
 ..\obj\main.o: ..\HARDWARE\Encoder\encoder.h
 ..\obj\main.o: ..\HARDWARE\RCC\rcc.h
+..\obj\main.o: ..\HARDWARE\ADC\adc.h
+..\obj\main.o: ..\USER\project_config.h
+..\obj\main.o: ..\HARDWARE\SPI\spi.h

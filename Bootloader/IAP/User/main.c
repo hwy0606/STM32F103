@@ -34,7 +34,7 @@ int main(void)
     KEY_Configuration() ;
     IAP_Init();
     //按键是否按下  高电平检测
-    if (GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4)  == 0x01)
+    if (GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_1)  == 0x00)
     {
         //假如USER1按键按下  
         //执行IAP驱动程序更新Flash程序
@@ -75,7 +75,7 @@ int main(void)
 
 /*******************************************************************************
   * @函数名称	KEY_Configuration
-  * @函数说明   按键初始化 PC4 默认下拉
+  * @函数说明   按键初始化 PB1 默认上拉
   * @输入参数   无
   * @输出参数   无
   * @返回参数   无
@@ -83,12 +83,12 @@ int main(void)
 void KEY_Configuration(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 
     //配置按键
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
-    GPIO_Init(GPIOC, &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
 /*******************************************************************************

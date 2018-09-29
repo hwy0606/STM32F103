@@ -77,7 +77,6 @@ PS:STM32F4 对应的TIM2是32位计数器
  */
 void Timer2_Init(void)
 {
-	  NVIC_InitTypeDef  NVIC_InitStructure;
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
     TIM_TimeBaseInitStructure.TIM_Period = 0xFFFF; 				//自动重装载值  65535
     TIM_TimeBaseInitStructure.TIM_Prescaler=7200-1;  					//定时器分频  减小分辨率扩大计时时间           

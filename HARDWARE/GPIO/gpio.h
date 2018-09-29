@@ -1,5 +1,6 @@
 #ifndef __GPIO_H
 #define __GPIO_H	 
+
 #include "sys.h"
 #include "project_config.h"
 
@@ -14,7 +15,7 @@ void BP_RESET_Init();
 
 #ifdef USE_SPO2_GPIO
 void SPO2_SLEEP_Init();
-
+#endif
 
 #ifdef USE_BACKUP_GPIO
 void BACKUP_GPIO_Init();
@@ -35,4 +36,5 @@ void ACTUATOR_GPIO_Init(void);
 #ifdef USE_OE_GPIO
 void OE_GPIO_Init(void);
 #endif
+
 #endif
