@@ -3,7 +3,7 @@
 ..\obj\usart5_dma.o: ..\SYSTEM\sys\sys.h
 ..\obj\usart5_dma.o: ..\USER\stm32f10x.h
 ..\obj\usart5_dma.o: ..\CORE\core_cm3.h
-..\obj\usart5_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\usart5_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\usart5_dma.o: ..\USER\system_stm32f10x.h
 ..\obj\usart5_dma.o: ..\USER\stm32f10x_conf.h
 ..\obj\usart5_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -31,7 +31,7 @@
 ..\obj\usart5_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart5_dma.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart5_dma.o: ..\USER\project_config.h
-..\obj\usart5_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usart5_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\usart5_dma.o: ..\USER\project_config.h
 ..\obj\usart5_dma.o: ..\HARDWARE\Usart5_Protocol\usart5_protocol.h
 ..\obj\usart5_dma.o: ..\USER\project_config.h

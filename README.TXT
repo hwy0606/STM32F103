@@ -1,8 +1,7 @@
 STM32F103RCT6 Project
 
 
-
-git_TEST
+GIT 测试成功
 
 
 定时器资源 ：TIM2 TIM4

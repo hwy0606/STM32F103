@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
 
 ==============================================================================
 
@@ -792,95 +792,95 @@ Memory Map of the image
 
   Load Region LR_IROM1 (Base: 0x08010000, Size: 0x00004190, Max: 0x00030000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08010000, Load base: 0x08010000, Size: 0x00004134, Max: 0x00030000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08010000, Size: 0x00004134, Max: 0x00030000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08010000   0x08010000   0x00000130   Data   RO          539    RESET               startup_stm32f10x_hd.o
-    0x08010130   0x08010130   0x00000000   Code   RO          666  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08010130   0x08010130   0x00000004   Code   RO          707    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08010134   0x08010134   0x00000004   Code   RO          710    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08010138   0x08010138   0x00000000   Code   RO          712    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08010138   0x08010138   0x00000000   Code   RO          714    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08010138   0x08010138   0x00000008   Code   RO          715    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08010140   0x08010140   0x00000000   Code   RO          717    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08010140   0x08010140   0x00000000   Code   RO          719    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08010140   0x08010140   0x00000004   Code   RO          708    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08010144   0x08010144   0x00000098   Code   RO            1    .text               main.o
-    0x080101dc   0x080101dc   0x0000001a   Code   RO          157    .text               stm32f10x_it.o
-    0x080101f6   0x080101f6   0x00000002   PAD
-    0x080101f8   0x080101f8   0x000001e0   Code   RO          198    .text               system_stm32f10x.o
-    0x080103d8   0x080103d8   0x00000274   Code   RO          216    .text               usart1_dma.o
-    0x0801064c   0x0801064c   0x0000027c   Code   RO          244    .text               usart2_dma.o
-    0x080108c8   0x080108c8   0x00000288   Code   RO          263    .text               usart3_dma.o
-    0x08010b50   0x08010b50   0x00000308   Code   RO          300    .text               key.o
-    0x08010e58   0x08010e58   0x0000005c   Code   RO          326    .text               crc_16.o
-    0x08010eb4   0x08010eb4   0x0000002c   Code   RO          341    .text               usart3_protocol.o
-    0x08010ee0   0x08010ee0   0x00000224   Code   RO          386    .text               usart2_protocol.o
-    0x08011104   0x08011104   0x00000120   Code   RO          409    .text               encoder.o
-    0x08011224   0x08011224   0x0000011e   Code   RO          428    .text               rcc.o
-    0x08011342   0x08011342   0x00000002   PAD
-    0x08011344   0x08011344   0x00000170   Code   RO          440    .text               usart5_dma.o
-    0x080114b4   0x080114b4   0x00000048   Code   RO          456    .text               usart5_protocol.o
-    0x080114fc   0x080114fc   0x00000118   Code   RO          469    .text               adc.o
-    0x08011614   0x08011614   0x0000011c   Code   RO          484    .text               spi.o
-    0x08011730   0x08011730   0x000000d4   Code   RO          496    .text               delay.o
-    0x08011804   0x08011804   0x00000024   Code   RO          540    .text               startup_stm32f10x_hd.o
-    0x08011828   0x08011828   0x0000035c   Code   RO          544    .text               stm32f10x_gpio.o
-    0x08011b84   0x08011b84   0x000003a4   Code   RO          556    .text               stm32f10x_rcc.o
-    0x08011f28   0x08011f28   0x00000408   Code   RO          570    .text               stm32f10x_usart.o
-    0x08012330   0x08012330   0x000000dc   Code   RO          582    .text               misc.o
-    0x0801240c   0x0801240c   0x00000254   Code   RO          594    .text               stm32f10x_dma.o
-    0x08012660   0x08012660   0x00000e1a   Code   RO          606    .text               stm32f10x_tim.o
-    0x0801347a   0x0801347a   0x00000002   PAD
-    0x0801347c   0x0801347c   0x0000011c   Code   RO          618    .text               stm32f10x_exti.o
-    0x08013598   0x08013598   0x0000044e   Code   RO          642    .text               stm32f10x_adc.o
-    0x080139e6   0x080139e6   0x00000002   PAD
-    0x080139e8   0x080139e8   0x0000030c   Code   RO          654    .text               stm32f10x_spi.o
-    0x08013cf4   0x08013cf4   0x00000024   Code   RO          669    .text               mc_w.l(memcpya.o)
-    0x08013d18   0x08013d18   0x0000007c   Code   RO          701    .text               mf_w.l(fdiv.o)
-    0x08013d94   0x08013d94   0x0000000a   Code   RO          703    .text               mf_w.l(ffltui.o)
-    0x08013d9e   0x08013d9e   0x00000028   Code   RO          705    .text               mf_w.l(ffixui.o)
-    0x08013dc6   0x08013dc6   0x00000000   Code   RO          723    .text               mc_w.l(iusefp.o)
-    0x08013dc6   0x08013dc6   0x0000006e   Code   RO          724    .text               mf_w.l(fepilogue.o)
-    0x08013e34   0x08013e34   0x00000024   Code   RO          726    .text               mc_w.l(init.o)
-    0x08013e58   0x08013e58   0x00000030   Code   RO          399    i.KEY1_Response     usart2_protocol.o
-    0x08013e88   0x08013e88   0x0000000e   Code   RO          730    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08013e96   0x08013e96   0x00000002   Code   RO          731    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08013e98   0x08013e98   0x0000000e   Code   RO          732    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08013ea6   0x08013ea6   0x00000002   PAD
-    0x08013ea8   0x08013ea8   0x0000006c   Code   RO          674    i.malloc            mc_w.l(malloc.o)
-    0x08013f14   0x08013f14   0x00000200   Data   RO          327    .constdata          crc_16.o
-    0x08014114   0x08014114   0x00000020   Data   RO          728    Region$$Table       anon$$obj.o
+    0x08010000   0x00000130   Data   RO          539    RESET               startup_stm32f10x_hd.o
+    0x08010130   0x00000000   Code   RO          666  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08010130   0x00000004   Code   RO          707    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08010134   0x00000004   Code   RO          710    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08010138   0x00000000   Code   RO          712    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08010138   0x00000000   Code   RO          714    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08010138   0x00000008   Code   RO          715    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08010140   0x00000000   Code   RO          717    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08010140   0x00000000   Code   RO          719    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08010140   0x00000004   Code   RO          708    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08010144   0x00000098   Code   RO            1    .text               main.o
+    0x080101dc   0x0000001a   Code   RO          157    .text               stm32f10x_it.o
+    0x080101f6   0x00000002   PAD
+    0x080101f8   0x000001e0   Code   RO          198    .text               system_stm32f10x.o
+    0x080103d8   0x00000274   Code   RO          216    .text               usart1_dma.o
+    0x0801064c   0x0000027c   Code   RO          244    .text               usart2_dma.o
+    0x080108c8   0x00000288   Code   RO          263    .text               usart3_dma.o
+    0x08010b50   0x00000308   Code   RO          300    .text               key.o
+    0x08010e58   0x0000005c   Code   RO          326    .text               crc_16.o
+    0x08010eb4   0x0000002c   Code   RO          341    .text               usart3_protocol.o
+    0x08010ee0   0x00000224   Code   RO          386    .text               usart2_protocol.o
+    0x08011104   0x00000120   Code   RO          409    .text               encoder.o
+    0x08011224   0x0000011e   Code   RO          428    .text               rcc.o
+    0x08011342   0x00000002   PAD
+    0x08011344   0x00000170   Code   RO          440    .text               usart5_dma.o
+    0x080114b4   0x00000048   Code   RO          456    .text               usart5_protocol.o
+    0x080114fc   0x00000118   Code   RO          469    .text               adc.o
+    0x08011614   0x0000011c   Code   RO          484    .text               spi.o
+    0x08011730   0x000000d4   Code   RO          496    .text               delay.o
+    0x08011804   0x00000024   Code   RO          540    .text               startup_stm32f10x_hd.o
+    0x08011828   0x0000035c   Code   RO          544    .text               stm32f10x_gpio.o
+    0x08011b84   0x000003a4   Code   RO          556    .text               stm32f10x_rcc.o
+    0x08011f28   0x00000408   Code   RO          570    .text               stm32f10x_usart.o
+    0x08012330   0x000000dc   Code   RO          582    .text               misc.o
+    0x0801240c   0x00000254   Code   RO          594    .text               stm32f10x_dma.o
+    0x08012660   0x00000e1a   Code   RO          606    .text               stm32f10x_tim.o
+    0x0801347a   0x00000002   PAD
+    0x0801347c   0x0000011c   Code   RO          618    .text               stm32f10x_exti.o
+    0x08013598   0x0000044e   Code   RO          642    .text               stm32f10x_adc.o
+    0x080139e6   0x00000002   PAD
+    0x080139e8   0x0000030c   Code   RO          654    .text               stm32f10x_spi.o
+    0x08013cf4   0x00000024   Code   RO          669    .text               mc_w.l(memcpya.o)
+    0x08013d18   0x0000007c   Code   RO          701    .text               mf_w.l(fdiv.o)
+    0x08013d94   0x0000000a   Code   RO          703    .text               mf_w.l(ffltui.o)
+    0x08013d9e   0x00000028   Code   RO          705    .text               mf_w.l(ffixui.o)
+    0x08013dc6   0x00000000   Code   RO          723    .text               mc_w.l(iusefp.o)
+    0x08013dc6   0x0000006e   Code   RO          724    .text               mf_w.l(fepilogue.o)
+    0x08013e34   0x00000024   Code   RO          726    .text               mc_w.l(init.o)
+    0x08013e58   0x00000030   Code   RO          399    i.KEY1_Response     usart2_protocol.o
+    0x08013e88   0x0000000e   Code   RO          730    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08013e96   0x00000002   Code   RO          731    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08013e98   0x0000000e   Code   RO          732    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08013ea6   0x00000002   PAD
+    0x08013ea8   0x0000006c   Code   RO          674    i.malloc            mc_w.l(malloc.o)
+    0x08013f14   0x00000200   Data   RO          327    .constdata          crc_16.o
+    0x08014114   0x00000020   Data   RO          728    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08014134, Size: 0x00000ba0, Max: 0x0000c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000ba0, Max: 0x0000c000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08014134   0x00000014   Data   RW          199    .data               system_stm32f10x.o
-    0x20000014   0x08014148   0x00000001   Data   RW          218    .data               usart1_dma.o
-    0x20000015   0x08014149   0x00000001   Data   RW          246    .data               usart2_dma.o
-    0x20000016   0x0801414a   0x00000001   Data   RW          265    .data               usart3_dma.o
-    0x20000017   0x0801414b   0x00000002   Data   RW          328    .data               crc_16.o
-    0x20000019   0x0801414d   0x0000000d   Data   RW          388    .data               usart2_protocol.o
-    0x20000026   0x0801415a   0x00000002   PAD
-    0x20000028   0x0801415c   0x00000010   Data   RW          410    .data               encoder.o
-    0x20000038   0x0801416c   0x00000002   Data   RW          442    .data               usart5_dma.o
-    0x2000003a   0x0801416e   0x00000004   Data   RW          497    .data               delay.o
-    0x2000003e   0x08014172   0x00000014   Data   RW          557    .data               stm32f10x_rcc.o
-    0x20000052   0x08014186   0x00000002   PAD
-    0x20000054   0x08014188   0x00000004   Data   RW          721    .data               mc_w.l(mvars.o)
-    0x20000058   0x0801418c   0x00000004   Data   RW          722    .data               mc_w.l(mvars.o)
-    0x2000005c        -       0x00000182   Zero   RW          217    .bss                usart1_dma.o
-    0x200001de        -       0x00000182   Zero   RW          245    .bss                usart2_dma.o
-    0x20000360        -       0x00000182   Zero   RW          264    .bss                usart3_dma.o
-    0x200004e2        -       0x00000020   Zero   RW          342    .bss                usart3_protocol.o
-    0x20000502        -       0x0000008a   Zero   RW          441    .bss                usart5_dma.o
-    0x2000058c        -       0x0000000e   Zero   RW          470    .bss                adc.o
-    0x2000059a   0x08014190   0x00000006   PAD
-    0x200005a0        -       0x00000200   Zero   RW          538    HEAP                startup_stm32f10x_hd.o
-    0x200007a0        -       0x00000400   Zero   RW          537    STACK               startup_stm32f10x_hd.o
+    0x20000000   0x00000014   Data   RW          199    .data               system_stm32f10x.o
+    0x20000014   0x00000001   Data   RW          218    .data               usart1_dma.o
+    0x20000015   0x00000001   Data   RW          246    .data               usart2_dma.o
+    0x20000016   0x00000001   Data   RW          265    .data               usart3_dma.o
+    0x20000017   0x00000002   Data   RW          328    .data               crc_16.o
+    0x20000019   0x0000000d   Data   RW          388    .data               usart2_protocol.o
+    0x20000026   0x00000002   PAD
+    0x20000028   0x00000010   Data   RW          410    .data               encoder.o
+    0x20000038   0x00000002   Data   RW          442    .data               usart5_dma.o
+    0x2000003a   0x00000004   Data   RW          497    .data               delay.o
+    0x2000003e   0x00000014   Data   RW          557    .data               stm32f10x_rcc.o
+    0x20000052   0x00000002   PAD
+    0x20000054   0x00000004   Data   RW          721    .data               mc_w.l(mvars.o)
+    0x20000058   0x00000004   Data   RW          722    .data               mc_w.l(mvars.o)
+    0x2000005c   0x00000182   Zero   RW          217    .bss                usart1_dma.o
+    0x200001de   0x00000182   Zero   RW          245    .bss                usart2_dma.o
+    0x20000360   0x00000182   Zero   RW          264    .bss                usart3_dma.o
+    0x200004e2   0x00000020   Zero   RW          342    .bss                usart3_protocol.o
+    0x20000502   0x0000008a   Zero   RW          441    .bss                usart5_dma.o
+    0x2000058c   0x0000000e   Zero   RW          470    .bss                adc.o
+    0x2000059a   0x00000006   PAD
+    0x200005a0   0x00000200   Zero   RW          538    HEAP                startup_stm32f10x_hd.o
+    0x200007a0   0x00000400   Zero   RW          537    STACK               startup_stm32f10x_hd.o
 
 
 ==============================================================================
@@ -890,38 +890,38 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       280         16          0          0         14       1454   adc.o
-        92         18        512          2          0       1356   crc_16.o
-       212         18          0          4          0        963   delay.o
-       288         24          0         16          0       1315   encoder.o
-       776         10          0          0          0       1452   key.o
-       152         14          0          0          0     281799   main.o
-       220         22          0          0          0       1721   misc.o
-       286          0          0          0          0        559   rcc.o
-       284         14          0          0          0        890   spi.o
-        36          8        304          0       1536        752   startup_stm32f10x_hd.o
-      1102         26          0          0          0      10961   stm32f10x_adc.o
-       596          8          0          0          0       4282   stm32f10x_dma.o
-       284         10          0          0          0       2175   stm32f10x_exti.o
-       860         38          0          0          0       5653   stm32f10x_gpio.o
-        26          0          0          0          0       1138   stm32f10x_it.o
-       932         36          0         20          0       8788   stm32f10x_rcc.o
-       780         14          0          0          0       6534   stm32f10x_spi.o
-      3610         88          0          0          0      22760   stm32f10x_tim.o
-      1032         22          0          0          0       8376   stm32f10x_usart.o
+       280         16          0          0         14       1502   adc.o
+        92         18        512          2          0       1404   crc_16.o
+       212         18          0          4          0        995   delay.o
+       288         24          0         16          0       1347   encoder.o
+       776         10          0          0          0       1472   key.o
+       152         14          0          0          0     282003   main.o
+       220         22          0          0          0       1753   misc.o
+       286          0          0          0          0        579   rcc.o
+       284         14          0          0          0        906   spi.o
+        36          8        304          0       1536        772   startup_stm32f10x_hd.o
+      1102         26          0          0          0      10993   stm32f10x_adc.o
+       596          8          0          0          0       4318   stm32f10x_dma.o
+       284         10          0          0          0       2207   stm32f10x_exti.o
+       860         38          0          0          0       5685   stm32f10x_gpio.o
+        26          0          0          0          0       1158   stm32f10x_it.o
+       932         36          0         20          0       8840   stm32f10x_rcc.o
+       780         14          0          0          0       6566   stm32f10x_spi.o
+      3610         88          0          0          0      22792   stm32f10x_tim.o
+      1032         22          0          0          0       8412   stm32f10x_usart.o
          0          0          0          0          0         32   sys.o
-       480         38          0         20          0       1619   system_stm32f10x.o
-       628         28          0          1        386       3084   usart1_dma.o
-         0          0          0          0          0        308   usart1_protocol.o
-       636         28          0          1        386       3084   usart2_dma.o
-       596         32          0         13          0       3929   usart2_protocol.o
-       648         34          0          1        386       2920   usart3_dma.o
-        44          4          0          0         32       1251   usart3_protocol.o
-       368         32          0          2        138       2063   usart5_dma.o
-        72          6          0          0          0       1142   usart5_protocol.o
+       480         38          0         20          0       1671   system_stm32f10x.o
+       628         28          0          1        386       3156   usart1_dma.o
+         0          0          0          0          0        324   usart1_protocol.o
+       636         28          0          1        386       3156   usart2_dma.o
+       596         32          0         13          0       3997   usart2_protocol.o
+       648         34          0          1        386       2992   usart3_dma.o
+        44          4          0          0         32       1307   usart3_protocol.o
+       368         32          0          2        138       2119   usart5_dma.o
+        72          6          0          0          0       1178   usart5_protocol.o
 
     ----------------------------------------------------------------------
-     15328        588        848         84       2884     382360   Object Totals
+     15328        588        848         84       2884     383636   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          8          0          0          4          6          0   (incl. Padding)
 
@@ -969,8 +969,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15844        620        848         92       2884     380576   Grand Totals
-     15844        620        848         92       2884     380576   ELF Image Totals
+     15844        620        848         92       2884     381852   Grand Totals
+     15844        620        848         92       2884     381852   ELF Image Totals
      15844        620        848         92          0          0   ROM Totals
 
 ==============================================================================
