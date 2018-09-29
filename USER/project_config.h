@@ -239,3 +239,4 @@
 #define SPI_SCK GPIO_Pin_13
 #define SPI_MISO GPIO_Pin_14
 #define SPI_MOSI GPIO_Pin_15
+#define CS PBout(12)	// PB12

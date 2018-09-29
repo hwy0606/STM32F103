@@ -68,7 +68,10 @@ u8 SPI2_Send(u16 Data)
 	while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET) //检查指定的SPI标志位设置与否:发送缓存空标志位
 		{
 		retry++;
-		if(retry>200)return 0;
+		if(retry>200)
+		{	
+			return 0;
+		}
 		}			  
 	SPI_I2S_SendData(SPI2, Data); //通过外设SPIx发送一个数据
 	retry=0;
