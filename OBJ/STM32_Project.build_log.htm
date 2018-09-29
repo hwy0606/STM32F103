@@ -22,60 +22,438 @@ Dialog DLL:        TARMSTM.DLL
  
 <h2>Project:</h2>
 F:\STM32 Project\USER\LED.uvprojx
-Project File Date:  09/26/2018
+Project File Date:  09/28/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LED'
-compiling main.c...
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
+compiling pwm.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
   #define SPEED_DATA_LEN  0x07
+..\HARDWARE\PWM\pwm.h(8): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
 ..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
-  #ifdef USE_PWM_CH1 || USE_PWM_CH2 ||USE_PWM_CH3 ||USE_PWM_CH4
+  #ifdef USE_PWM_CH3 ||USE_PWM_CH4
 ..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
   void PWM_Init_Default();
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\PWM\pwm.c(68): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifdef USE_PWM_CH3 ||USE_PWM_CH4
+..\HARDWARE\PWM\pwm.c: 6 warnings, 0 errors
+compiling main.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\PWM\pwm.h(8): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifdef USE_PWM_CH3 ||USE_PWM_CH4
+..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
   #define SPEED_DATA_LEN  0x07
 ..\HARDWARE\Motor_Control\motor_control.h(6): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
   void Motor_Init();
 ..\HARDWARE\Motor_Control\motor_control.h(19): warning:  #1-D: last line of file ends without a newline
   #endif
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
   #define SPEED_DATA_LEN  0x07
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(7): warning:  #1295-D: Deprecated declaration USART1_Key_Init - give arg types
-  void USART1_Key_Init(); //按键传输协议初始化
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(13): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
   void KEY1_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(28): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
   void KEY6_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(31): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
   void KEY7_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(34): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
   void KEY8_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(43): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
   void SPO2_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(44): warning:  #1295-D: Deprecated declaration USART1_Speed_Init - give arg types
-  void USART1_Speed_Init();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(45): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
   void Speed_Response();
-..\HARDWARE\Usart1_Protocol\usart1_protocol.h(49): warning:  #1-D: last line of file ends without a newline
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
   #endif
-..\HARDWARE\Usart2_Protocol\usart2_protocol.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\USER\project_config.h(147): warning:  #1-D: last line of file ends without a newline
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
   #define SPEED_DATA_LEN  0x07
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(5): warning:  #1295-D: Deprecated declaration USART3_Sensor_Init - give arg types
-  void USART3_Sensor_Init();
-..\HARDWARE\Usart3_Protocol\usart3_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+..\HARDWARE\Usart3_Protocol\usart3_protocol.h(11): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(39): warning:  #223-D: function "USART3_DMA_Init" declared implicitly
-    USART3_DMA_Init(USART3_BaudRate);	
-main.c: 21 warnings, 0 errors
-compiling led.c...
-linking...
-Program Size: Code=13820 RO-data=848 RW-data=88 ZI-data=2736  
-FromELF: creating hex file...
-"..\OBJ\STM32_Project.axf" - 0 Error(s), 21 Warning(s).
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\RCC\rcc.h(6): warning:  #1295-D: Deprecated declaration RCC_Init - give arg types
+  void RCC_Init();
+..\HARDWARE\RCC\rcc.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c: 31 warnings, 0 errors
+compiling key.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Key\key.c(255): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\Key\key.c: 15 warnings, 0 errors
+compiling usart3_dma.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart3_DMA\usart3_dma.c: 15 warnings, 0 errors
+compiling usart1_protocol.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart1_Protocol\usart1_protocol.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\CRC_16\crc_16.h(8): warning:  #1295-D: Deprecated declaration Get_ucCRCHi - give arg types
+  u8 Get_ucCRCHi();//获取高8位
+..\HARDWARE\CRC_16\crc_16.h(9): warning:  #1295-D: Deprecated declaration Get_ucCRCLo - give arg types
+  u8 Get_ucCRCLo();//获取低8位
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart1_Protocol\usart1_protocol.c: 7 warnings, 0 errors
+compiling usart2_dma.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart1_Protocol\usart1_protocol.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart3_Protocol\usart3_protocol.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart2_DMA\usart2_dma.c(21): warning:  #550-D: variable "USART2_TX_BUSY"  was set but never used
+  static u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
+..\HARDWARE\Usart2_DMA\usart2_dma.c: 23 warnings, 0 errors
+compiling usart1_dma.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart1_Protocol\usart1_protocol.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart3_Protocol\usart3_protocol.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart1_DMA\usart1_dma.c: 22 warnings, 0 errors
+compiling crc_16.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\CRC_16\crc_16.h(8): warning:  #1295-D: Deprecated declaration Get_ucCRCHi - give arg types
+  u8 Get_ucCRCHi();//获取高8位
+..\HARDWARE\CRC_16\crc_16.h(9): warning:  #1295-D: Deprecated declaration Get_ucCRCLo - give arg types
+  u8 Get_ucCRCLo();//获取低8位
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\CRC_16\crc_16.c: 4 warnings, 0 errors
+compiling gpio.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\GPIO\gpio.h(8): warning:  #1295-D: Deprecated declaration Internet_GPIO_Init - give arg types
+  void Internet_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(12): warning:  #1295-D: Deprecated declaration BP_RESET_Init - give arg types
+  void BP_RESET_Init();
+..\HARDWARE\GPIO\gpio.h(16): warning:  #1295-D: Deprecated declaration SPO2_SLEEP_Init - give arg types
+  void SPO2_SLEEP_Init();
+..\HARDWARE\GPIO\gpio.h(20): warning:  #1295-D: Deprecated declaration BACKUP_GPIO_Init - give arg types
+  void BACKUP_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(24): warning:  #1295-D: Deprecated declaration MOTOR_GPIO_Init - give arg types
+  void MOTOR_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\GPIO\gpio.h(1): error:  #37: the #endif for this directive is missing
+  #ifndef __GPIO_H
+..\HARDWARE\GPIO\gpio.c: 7 warnings, 1 error
+compiling usart2_protocol.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\CRC_16\crc_16.h(8): warning:  #1295-D: Deprecated declaration Get_ucCRCHi - give arg types
+  u8 Get_ucCRCHi();//获取高8位
+..\HARDWARE\CRC_16\crc_16.h(9): warning:  #1295-D: Deprecated declaration Get_ucCRCLo - give arg types
+  u8 Get_ucCRCLo();//获取低8位
+..\HARDWARE\Usart2_Protocol\usart2_protocol.c: 18 warnings, 0 errors
+compiling usart3_protocol.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart3_Protocol\usart3_protocol.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart3_Protocol\usart3_protocol.c: 4 warnings, 0 errors
+compiling motor_control.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Motor_Control\motor_control.h(6): warning:  #1295-D: Deprecated declaration Motor_Init - give arg types
+  void Motor_Init();
+..\HARDWARE\Motor_Control\motor_control.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\PWM\pwm.h(8): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifdef USE_PWM_CH3 ||USE_PWM_CH4
+..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\GPIO\gpio.h(8): warning:  #1295-D: Deprecated declaration Internet_GPIO_Init - give arg types
+  void Internet_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(12): warning:  #1295-D: Deprecated declaration BP_RESET_Init - give arg types
+  void BP_RESET_Init();
+..\HARDWARE\GPIO\gpio.h(16): warning:  #1295-D: Deprecated declaration SPO2_SLEEP_Init - give arg types
+  void SPO2_SLEEP_Init();
+..\HARDWARE\GPIO\gpio.h(20): warning:  #1295-D: Deprecated declaration BACKUP_GPIO_Init - give arg types
+  void BACKUP_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(24): warning:  #1295-D: Deprecated declaration MOTOR_GPIO_Init - give arg types
+  void MOTOR_GPIO_Init();
+..\HARDWARE\GPIO\gpio.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\GPIO\gpio.h(1): error:  #37: the #endif for this directive is missing
+  #ifndef __GPIO_H
+..\HARDWARE\Motor_Control\motor_control.c(25): warning:  #223-D: function "Motor_GPIO_Init" declared implicitly
+  	Motor_GPIO_Init();
+..\HARDWARE\Motor_Control\motor_control.c(31): error:  #20: identifier "MOTOR1_IN1" is undefined
+    MOTOR1_IN1=0;
+..\HARDWARE\Motor_Control\motor_control.c(32): error:  #20: identifier "MOTOR1_IN2" is undefined
+  	MOTOR1_IN2=0;
+..\HARDWARE\Motor_Control\motor_control.c(39): error:  #20: identifier "MOTOR1_IN1" is undefined
+    MOTOR1_IN1=1;
+..\HARDWARE\Motor_Control\motor_control.c(40): error:  #20: identifier "MOTOR1_IN2" is undefined
+  	MOTOR1_IN2=0;
+..\HARDWARE\Motor_Control\motor_control.c(46): error:  #20: identifier "MOTOR1_IN1" is undefined
+    MOTOR1_IN1=0;
+..\HARDWARE\Motor_Control\motor_control.c(47): error:  #20: identifier "MOTOR1_IN2" is undefined
+  	MOTOR1_IN2=1;
+..\HARDWARE\Motor_Control\motor_control.c(67): error:  #20: identifier "MOTOR2_IN1" is undefined
+    MOTOR2_IN1=0;
+..\HARDWARE\Motor_Control\motor_control.c(68): error:  #20: identifier "MOTOR2_IN2" is undefined
+  	MOTOR2_IN2=0;
+..\HARDWARE\Motor_Control\motor_control.c(75): error:  #20: identifier "MOTOR2_IN1" is undefined
+    MOTOR2_IN1=1;
+..\HARDWARE\Motor_Control\motor_control.c(76): error:  #20: identifier "MOTOR2_IN2" is undefined
+  	MOTOR2_IN2=0;
+..\HARDWARE\Motor_Control\motor_control.c(82): error:  #20: identifier "MOTOR2_IN1" is undefined
+    MOTOR2_IN1=0;
+..\HARDWARE\Motor_Control\motor_control.c(83): error:  #20: identifier "MOTOR2_IN2" is undefined
+  	MOTOR2_IN2=1;
+..\HARDWARE\Motor_Control\motor_control.c(87): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Motor_Control\motor_control.c: 16 warnings, 13 errors
+compiling encoder.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Encoder\encoder.c(80): warning:  #177-D: variable "NVIC_InitStructure"  was declared but never referenced
+  	  NVIC_InitTypeDef  NVIC_InitStructure;
+..\HARDWARE\Encoder\encoder.c: 2 warnings, 0 errors
+compiling rcc.c...
+..\HARDWARE\RCC\rcc.h(6): warning:  #1295-D: Deprecated declaration RCC_Init - give arg types
+  void RCC_Init();
+..\HARDWARE\RCC\rcc.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\RCC\rcc.c: 3 warnings, 0 errors
+compiling usart5_dma.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart5_DMA\usart5_dma.c: 5 warnings, 0 errors
+compiling usart5_protocol.c...
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\USER\project_config.h(213): warning:  #1-D: last line of file ends without a newline
+  #define SPEED_DATA_LEN  0x07
+..\HARDWARE\Usart5_Protocol\usart5_protocol.c: 5 warnings, 0 errors
+"..\OBJ\STM32_Project.axf" - 14 Error(s), 183 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,7 +467,8 @@ Package Vendor: Keil
   D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

@@ -4,18 +4,17 @@
 //HWY 2018 09 13
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 
-//LED调试
-#define USE_LED0
-#define USE_LED1
 
-//串口DMA 
+////////////////////////////////////////////////////////////////////////////////// 
+//串口DMA S使用和配置 
 #define USE_USART1_DMA
 #define USE_USART2_DMA
 #define USE_USART3_DMA
+#define USE_USART5_DMA
 #define USART1_BaudRate 115200
 #define USART2_BaudRate 115200
 #define USART3_BaudRate 115200
-
+#define USART5_BaudRate 115200
 /*USART1 相关宏定义 */
 /* UART1 GPIO define. */            //宏定义
 #define USART1_GPIO_TX       		   GPIO_Pin_9
@@ -40,15 +39,25 @@
 #define USART3_GPIO_RX       		   GPIO_Pin_11
 #define USART3_GPIO_TX_PinSource   GPIO_PinSource10
 #define USART3_GPIO_RX_PinSource   GPIO_PinSource11
-#define USART3_GPIO          		   GPIOB
-#define USART3_GPIO_RCC      		   RCC_APB2Periph_GPIOB
+#define USART3_GPIO          		   GPIOC
+#define USART3_GPIO_RCC      		   RCC_APB2Periph_GPIOC
 #define USART3_DATA_LEN  64  //接收和发送数据的最大长度
+/*USART5 相关宏定义 */
+/* UART5 GPIO define. */
+#define USART5_GPIO_TX       		   GPIO_Pin_12
+#define USART5_GPIO_RX       		   GPIO_Pin_2
+#define USART5_GPIO_TX_PinSource   GPIO_PinSource12
+#define USART5_GPIO_RX_PinSource   GPIO_PinSource2
+#define USART5_TX_GPIO          		GPIOC
+#define USART5_RX_GPIO          		GPIOD
+#define USART5_GPIO_RCC      		   RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD
+#define USART5_DATA_LEN  64  //接收和发送数据的最大长度
 
+//////////////////////////////////////////////////////////////////////////////////
 //PWM 默认TIM4
-#define USE_PWM_CH1
-#define USE_PWM_CH2
-//#define USE_PWM_CH3
-//#define USE_PWM_CH4
+
+#define USE_PWM_CH3
+#define USE_PWM_CH4
 
 /*PWM相关宏定义*/
 #define PWM_CH1_GPIO     GPIO_Pin_6
@@ -61,13 +70,12 @@
 #define PWM_GPIO         GPIOB
 #define PWM_TIM          TIM4
 
-//默认使用PWM频率 100Khz
+//默认使用PWM频率 100Khz 更改PWM占空比后需要修改Set_PWM_CHx_Duty_Cycle函数
 #define PWM_Frequency 100
 #define PWM_ARR  (72000/PWM_Frequency)-1
 #define PWM_PSC 0 //不分频
 
 //500HZ频率测试
-
 //#define PWM_ARR  20000-1
 //#define PWM_PSC  10000-1
 
@@ -77,54 +85,112 @@
 //#define USE_CRC_HARDWARE
 #define USE_CRC_SOFTWARE
 
-//按键8个 预留两个 总共驱动10个按键引脚
-
-#define USE_PA1_KEY
-//#define USE_PD2_KEY 
-#define USE_PC3_KEY
-#define USE_PC4_KEY
-#define USE_PC5_KEY
+//按键8个  PB2按键可能有点问题，BOOT1引脚 
+#define USE_PB1_KEY
+//#define USE_PB2_KEY 
 #define USE_PC6_KEY
 #define USE_PC7_KEY
 #define USE_PC8_KEY
-//#define USE_PC9_KEY
+#define USE_PC9_KEY
+#define USE_PB10_KEY
+#define USE_PB11_KEY
 
-//GPIO 4+3
-//4个控制电机正反转 3个控制LED灯
-//全部定义位带操作
+
+//GPIO OUTPUT
+/*所有输出通过sys.h文件定义位带操作*/
+/*以太网模块*/
+/* CFG-PA1 RST-PA4*/
+#define USE_INTERNET_GPIO
+/*血压模块*/
+/*RESET-PA14*/
+#define USE_BP_GPIO
+/*血氧模块*/
+/*SLEEP-PA15*/
+#define USE_SPO2_GPIO
+/*备用控制器*/
+/* IN1-PB3 IN2-PA13*/
+#define USE_BACKUP_GPIO
+/*MOTOR控制 PB4*/
 #define USE_MOTOR_GPIO
+/*LED PB5*/
 #define USE_LED_GPIO
+/*电动推杆 */
+/*IN1-PB6 IN2-PB7*/
+#define USE_ACTUATOR_GPIO
+
+/*245输出使能 PC2 低电平有效*/
+#define USE_OE_GPIO
+
+#ifdef USE_INTERNET_GPIO
+#define  INTERNET_GPIO_RCC RCC_APB2Periph_GPIOA
+#define  CFG_GPIO_PA1 GPIO_Pin_1
+#define  RST_GPIO_PA4 GPIO_Pin_4
+#define  INTERNET_GPIO         GPIOA
+#define  INTERNET_CFG PAout(1)	// PA1
+#define  INTERNET_RST PAout(4)	// PA4
+#endif
+
+#ifdef USE_BP_GPIO
+#define BP_GPIO_RCC RCC_APB2Periph_GPIOA
+#define RESET_GPIO_PA14 GPIO_Pin_14
+#define BP_GPIO         GPIOA
+#define BP_RESET PAout(14)	// PA14
+#endif
+
+#ifdef USE_SPO2_GPIO
+#define SPO2_GPIO_RCC RCC_APB2Periph_GPIOA
+#define SLEEP_GPIO_PA15 GPIO_Pin_15
+#define SPO2_GPIO         GPIOA
+#define SPO2_SLEEP PAout(15)	// PA15
+#endif
+
+
+#ifdef USE_BACKUP_GPIO
+#define BACKUP_GPIO_RCC RCC_APB2Periph_GPIOA |RCC_APB2Periph_GPIOB
+#define BACKUP_GPIO_PB3 GPIO_Pin_3
+#define BACKUP_GPIO_PA13 GPIO_Pin_13
+#define BACKUP_IN1_GPIO         GPIOB
+#define BACKUP_IN2_GPIO         GPIOA
+#define BACKUP_IN1 PBout(3)	  // PB3
+#define BACKUP_IN2 PAout(13)	// PA13
+#endif
 
 #ifdef USE_MOTOR_GPIO
-#define  MOTOR_GPIO_RCC RCC_APB2Periph_GPIOB
-#define  MOTOR_GPIO_PB12 GPIO_Pin_12
-#define  MOTOR_GPIO_PB13 GPIO_Pin_13
-#define  MOTOR_GPIO_PB14 GPIO_Pin_14
-#define  MOTOR_GPIO_PB15 GPIO_Pin_15
-#define  MOTOR_GPIO         GPIOB
-#define  MOTOR1_IN1 PBout(12)	// PB12
-#define  MOTOR1_IN2 PBout(13)	// PB13
-#define  MOTOR2_IN1 PBout(14)	// PB14
-#define  MOTOR2_IN2 PBout(15)	// PB15
+#define MOTOR_GPIO_RCC RCC_APB2Periph_GPIOB
+#define MOTOR_GPIO_PB4 GPIO_Pin_4
+#define MOTOR_GPIO         GPIOB
+#define MOTOR PBout(4)	  // PB4
 #endif
 
 #ifdef USE_LED_GPIO
-#define  LED_GPIO_RCC RCC_APB2Periph_GPIOC
-#define  LED_GPIO_PC10 GPIO_Pin_10
-#define  LED_GPIO_PC11 GPIO_Pin_11
-#define  LED_GPIO_PC12 GPIO_Pin_12
-#define  LED_GPIO         GPIOC
-#define LED0 PCout(10)	// PC10
-#define LED1 PCout(11)	// PC11
-#define LED2 PCout(12)	// PC12
+#define  LED_GPIO_RCC RCC_APB2Periph_GPIOB
+#define  LED_GPIO_PB5 GPIO_Pin_5
+#define  LED_GPIO         GPIOB
+#define LED PBout(5)	// PB5
 #endif
-//数码管
+
+#ifdef USE_ACTUATOR_GPIO
+#define ACTUATOR_GPIO_RCC RCC_APB2Periph_GPIOB
+#define ACTUATOR_GPIO_PB6 GPIO_Pin_6
+#define ACTUATOR_GPIO_PB7 GPIO_Pin_7
+#define ACTUATOR_GPIO         GPIOB
+#define ACTUATOR_IN1 PBout(6)	  // PB6
+#define ACTUATOR_IN2 PBout(7)	  // PB7
+#endif
+
+#ifdef USE_OE_GPIO
+#define  OE_GPIO_RCC RCC_APB2Periph_GPIOC
+#define  OE_GPIO_PC2 GPIO_Pin_2
+#define  OE_GPIO         GPIOC
+#define  OE PCout(2)	// PC2
+#endif
+//数码管  SPI
 
 
-//电机驱动
-#define USE_MOTOR_CONTROL1
+//电机控制板驱动
+#define USE_ACTUATOR_CONTROL
 
-#define USE_MOTOR_CONTROL2
+#define USE_BACKUP_CONTROL
 
 
 
@@ -141,7 +207,7 @@
 
 
 //Hall_Sensor
-#define USE_PA0_HALL_IPD
+#define USE_PC0_HALL_IPD
 #define HALL_MAGNET_AMOUNT 3
 #define HALL_SPEED_CONST 60*10000/HALL_MAGNET_AMOUNT
 #define SPEED_DATA_LEN  0x07

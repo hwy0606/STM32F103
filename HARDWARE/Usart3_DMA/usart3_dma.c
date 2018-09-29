@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////	 
 //STM32F103RCT6
 //USART+DMA发送和接收
-//引脚 PA2 TX PA3 RX
+//引脚 PC10 TX PC11 RX
 //驱动层
 //HWY 2017 10 18
 //All rights reserved									  
@@ -11,15 +11,14 @@
 #include <string.h> 	  
 #include "delay.h"
 #include "project_config.h"
-#include "usart3_protocol.h"
+#include "usart2_protocol.h"
 /*private*/
- u8 USART3_SEND_DATA[USART3_DATA_LEN];  
- u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
- u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART3_SEND_DATA[USART3_DATA_LEN];  
+static u8 USART3_RECEIVE_DATA[USART3_DATA_LEN]; 
+static u8 USART3_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart3_buffer uart3_rx,uart3_tx;
-u8 SPO2_DATA[SPO2_DATA_LEN];
-u8 SPO2_FLAG=0; //0-未更新 1-更新
+
 /**
 * @Description: UART3_DMA初始化
 * @param baud - 串口波特率.    
@@ -34,8 +33,8 @@ void USART3_DMA_Init(u32 baud)
     DMA_InitTypeDef DMA_InitStructure;  	   		//定义DMA结构体  
   
 /* 第1步：串口IO设置 */       
-    RCC_APB2PeriphClockCmd(USART3_GPIO_RCC, ENABLE);   
- 
+     
+		GPIO_PinRemapConfig(GPIO_PartialRemap_USART3,ENABLE);
   
     /* USART3 Tx的GPIO配置为推挽复用模式 */
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;       //管脚模式:输出口              //上拉下拉设置    
@@ -51,7 +50,7 @@ void USART3_DMA_Init(u32 baud)
 /* 第2步：基本串口参数设置 */   
 
       
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);  	  //打开串口对应的外设时钟  
+     
     /* 初始化串口参数 */   
     USART_InitStructure.USART_BaudRate = baud;  
 	  USART_InitStructure.USART_WordLength = USART_WordLength_8b;    
@@ -82,7 +81,7 @@ void USART3_DMA_Init(u32 baud)
 //	  USART_HalfDuplexCmd(USART3, ENABLE);//使能或者失能USART半双工模式
 	
     /* 第3步：串口发送DMA配置 */ 	 
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  		//启动DMA时钟 
+    
     /* DMA发送中断设置 */ 
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel2_IRQn;  		
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  		
@@ -107,7 +106,7 @@ void USART3_DMA_Init(u32 baud)
 
 /* 第3步：串口接收DMA配置 */     
      																    //启动DMA时钟
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  
+    
      
     DMA_DeInit(DMA1_Channel3);   					 //DMA通道配置     
     DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&USART3->DR);  //外设地址      
@@ -208,17 +207,9 @@ void USART3_IRQHandler(void)
 	{ 
     	uart3_rx.len = USART3_RX_Finish_IRQ(uart3_rx.buf);	 
 		  //接收数据在USART3_RECEIVE_DATA 数组中 
-		  //判断是实时数据还是状态数据 实时数据则丢弃 状态数据复制到SP02数组中
-		if(Is_State_Date(&USART3_RECEIVE_DATA[0]))
-		{	
-			//如果是状态数据 则将USART3_RECEIVE_DATA数组复制到SPO2数组中 只复制有用信息 此处未检验校验和 后期可完善
-				SPO2_DATA[3]=USART3_RECEIVE_DATA[6];//有效数据第一位 SPO2计算结果 
-	      SPO2_DATA[4]=USART3_RECEIVE_DATA[7];//有效数据第二位 灌注指数低8位 
-	      SPO2_DATA[5]=USART3_RECEIVE_DATA[8];//有效数据第三位 灌注指数高8位 
-				SPO2_DATA[6]=USART3_RECEIVE_DATA[11];//有效数据第四位 状态数据 
-				SPO2_DATA[7]=USART3_RECEIVE_DATA[13];//有效数据第五位 SQI信号质量 
-			  SPO2_FLAG=1; //更新等待发送
-		}
+		  /*用户操作函数*/
+		   USART2_BP_Response (&USART3_RECEIVE_DATA[0],uart3_rx.len);
+
 	}  
 }  
  

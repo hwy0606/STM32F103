@@ -30,8 +30,15 @@
 ..\obj\usart2_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\usart2_dma.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart2_dma.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\usart2_dma.o: ..\USER\project_config.h
 ..\obj\usart2_dma.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\usart2_dma.o: ..\SYSTEM\delay\delay.h
 ..\obj\usart2_dma.o: ..\USER\project_config.h
 ..\obj\usart2_dma.o: ..\HARDWARE\Usart1_Protocol\usart1_protocol.h
+..\obj\usart2_dma.o: ..\USER\project_config.h
+..\obj\usart2_dma.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h
+..\obj\usart2_dma.o: ..\USER\project_config.h
+..\obj\usart2_dma.o: ..\HARDWARE\Usart3_Protocol\usart3_protocol.h
+..\obj\usart2_dma.o: ..\USER\project_config.h
+..\obj\usart2_dma.o: ..\HARDWARE\Usart5_Protocol\usart5_protocol.h
 ..\obj\usart2_dma.o: ..\USER\project_config.h

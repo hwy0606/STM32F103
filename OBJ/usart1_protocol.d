@@ -32,6 +32,7 @@
 ..\obj\usart1_protocol.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart1_protocol.o: ..\USER\project_config.h
 ..\obj\usart1_protocol.o: ..\HARDWARE\Usart1_DMA\usart1_dma.h
+..\obj\usart1_protocol.o: ..\USER\project_config.h
 ..\obj\usart1_protocol.o: ..\HARDWARE\CRC_16\crc_16.h
 ..\obj\usart1_protocol.o: ..\USER\project_config.h
 ..\obj\usart1_protocol.o: ..\USER\project_config.h

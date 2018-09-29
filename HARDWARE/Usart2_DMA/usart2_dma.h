@@ -1,7 +1,9 @@
 #ifndef __USART2_DMA_H
 #define __USART2_DMA_H
 #include "sys.h"
+#include "project_config.h"
 
+#ifdef USE_USART2_DMA
 struct uart2_buffer
 {
 	unsigned char  len;   //数据长度
@@ -13,5 +15,6 @@ extern u8 USART2_TX_BUSY; //0：空闲 1:正在发送
 void USART2_DMA_Init(u32 baud) ;
 void USART2_DMA_Send_Once_Data(uint8_t *data,uint16_t size)  ;
 uint8_t USART2_RX_Finish_IRQ(uint8_t *buf)  ;
-		    
+#endif
+
 #endif

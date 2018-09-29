@@ -14,10 +14,12 @@
 #include "stm32f10x_dma.h"	
 #include "usart1_protocol.h"
 #include "usart2_protocol.h"
+#include "usart3_protocol.h"
+#include "usart5_protocol.h"
 /*private*/
- u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
- u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
- u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART1_SEND_DATA[USART1_DATA_LEN];  // 发送数组
+static u8 USART1_RECEIVE_DATA[USART1_DATA_LEN]; //接收数组
+static u8 USART1_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart1_buffer uart1_rx,uart1_tx;
 	  
@@ -36,8 +38,6 @@ void USART1_DMA_Init(u32 baud)
     DMA_InitTypeDef DMA_InitStructure;  	   		//定义DMA结构体  
   
 /* 第1步：串口IO设置 */       
-    RCC_APB2PeriphClockCmd(USART1_GPIO_RCC, ENABLE);  
-
   
     /* USART Tx的GPIO配置为推挽复用模式 */
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;       //管脚模式:输出口                
@@ -55,7 +55,7 @@ void USART1_DMA_Init(u32 baud)
 
 /* 第2步：基本串口参数设置 */   
    
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);  	  //打开串口对应的外设时钟  
+    
     /* 初始化串口参数 */   
     USART_InitStructure.USART_BaudRate = baud;                   //波特率
 	  USART_InitStructure.USART_WordLength = USART_WordLength_8b;    
@@ -86,7 +86,7 @@ void USART1_DMA_Init(u32 baud)
 	
 	
 /* 第3步：串口发送DMA配置 */ 	 
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  		//启动DMA2时钟 
+  
     /* DMA发送中断设置 */ 
 		
 		
@@ -115,7 +115,7 @@ void USART1_DMA_Init(u32 baud)
 
 /* 第3步：串口接收DMA配置 */     
      																    //启动DMA时钟
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  
+    
      
     DMA_DeInit(DMA1_Channel5);  
     DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&USART1->DR);  //外设地址      
@@ -141,9 +141,9 @@ void USART1_DMA_Init(u32 baud)
 void USART1_DMA_Send_Once_Data(uint8_t *data,uint16_t size)  //发送数据函数
 { 
 	/* 发送检测循环容易卡死*/	
-//    /* 等待空闲 */ 
-//    while (USART1_TX_BUSY);  
-//    USART1_TX_BUSY = 1;  //发送中
+    /* 等待空闲 */ 
+    while (USART1_TX_BUSY);  
+    USART1_TX_BUSY = 1;  //发送中
 	
     /* 复制数据 */ 
     memcpy(USART1_SEND_DATA,data,size);
@@ -217,16 +217,7 @@ void USART1_IRQHandler(void)
 	{ 
     	uart1_rx.len = USART1_RX_Finish_IRQ(uart1_rx.buf);
 		/*用户操作函数*/
-		/*判断是不是血压操作指令 后期可更改为switch结构 */
-		if(Is_BP_Order(&USART1_RECEIVE_DATA[0])) 
-		{
-			BP_Order_USART2(&USART1_RECEIVE_DATA[0]);
-		}
-		
-		if(Is_Speed_Order(&USART1_RECEIVE_DATA[0])) 
-		{
-			Speed_Response();
-		}
+
 	}  
 }  
  

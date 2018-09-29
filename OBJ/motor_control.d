@@ -33,3 +33,5 @@
 ..\obj\motor_control.o: ..\USER\project_config.h
 ..\obj\motor_control.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\motor_control.o: ..\USER\project_config.h
+..\obj\motor_control.o: ..\HARDWARE\GPIO\gpio.h
+..\obj\motor_control.o: ..\USER\project_config.h

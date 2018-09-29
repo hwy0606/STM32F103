@@ -2,8 +2,10 @@
 #define __USART3_PROTOCOL_H 
 #include "sys.h"
 #include "project_config.h"
-void USART3_Sensor_Init();
-u8 Is_State_Date(u8 *USART_RECEIVE_DATA);
+
+
+
+void BP_Order_USART3(u8 *USART_RECEIVE_DATA);
 
 
 #endif

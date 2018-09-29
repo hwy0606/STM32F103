@@ -12,10 +12,13 @@
 #include "delay.h"
 #include "project_config.h"
 #include "usart1_protocol.h"
+#include "usart2_protocol.h"
+#include "usart3_protocol.h"
+#include "usart5_protocol.h"
 /*private*/
- u8 USART2_SEND_DATA[USART2_DATA_LEN];  
- u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
- u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
+static u8 USART2_SEND_DATA[USART2_DATA_LEN];  
+static u8 USART2_RECEIVE_DATA[USART2_DATA_LEN]; 
+static u8 USART2_TX_BUSY=0; //0：空闲 1:正在发送
 /*public*/
 struct uart2_buffer uart2_rx,uart2_tx;
 	  
@@ -34,7 +37,7 @@ void USART2_DMA_Init(u32 baud)
     DMA_InitTypeDef DMA_InitStructure;  	   		//定义DMA结构体  
   
 /* 第1步：串口IO设置 */       
-    RCC_APB2PeriphClockCmd(USART2_GPIO_RCC, ENABLE);   
+    
  
   
     /* USART Tx的GPIO配置为推挽复用模式 */
@@ -51,7 +54,7 @@ void USART2_DMA_Init(u32 baud)
 /* 第2步：基本串口参数设置 */   
 
       
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);  	  //打开串口对应的外设时钟  
+    
     /* 初始化串口参数 */   
     USART_InitStructure.USART_BaudRate = baud;  
 	  USART_InitStructure.USART_WordLength = USART_WordLength_8b;    
@@ -82,7 +85,7 @@ void USART2_DMA_Init(u32 baud)
 //	  USART_HalfDuplexCmd(USART2, ENABLE);//使能或者失能USART半双工模式
 	
     /* 第3步：串口发送DMA配置 */ 	 
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  		//启动DMA时钟 
+    
     /* DMA发送中断设置 */ 
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel7_IRQn;  		
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  		
@@ -107,7 +110,7 @@ void USART2_DMA_Init(u32 baud)
 
 /* 第3步：串口接收DMA配置 */     
      																    //启动DMA时钟
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  
+     
      
     DMA_DeInit(DMA1_Channel6);   					 //DMA通道配置     
     DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&USART2->DR);  //外设地址      
@@ -134,8 +137,8 @@ void USART2_DMA_Init(u32 baud)
 void USART2_DMA_Send_Once_Data(uint8_t *data,uint16_t size)  
 {  
     /* 等待空闲 */ 
-    while (USART2_TX_BUSY);  
-    USART2_TX_BUSY = 1;  
+//    while (USART2_TX_BUSY);  
+//    USART2_TX_BUSY = 1;  
     /* 复制数据 */ 
     memcpy(USART2_SEND_DATA,data,size);
 	  /* 改变datasize前先要禁止通道工作 */ 
@@ -207,8 +210,16 @@ void USART2_IRQHandler(void)
 	if(USART_GetITStatus(USART2, USART_IT_IDLE) != RESET)
 	{ 
     	uart2_rx.len = USART2_RX_Finish_IRQ(uart2_rx.buf);	 
-		/*用户操作函数*/
-		USART1_BP_Response (&USART2_RECEIVE_DATA[0],uart2_rx.len);
+			/*判断是不是血压操作指令 后期可更改为switch结构 */
+		if(Is_BP_Order(&USART2_RECEIVE_DATA[0])) 
+		{
+			BP_Order_USART3(&USART2_RECEIVE_DATA[0]);
+		}
+		
+		if(Is_Speed_Order(&USART2_RECEIVE_DATA[0])) 
+		{
+			Speed_Response();
+		}	
 	}  
 }  
  

@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////	 
 //STM32F103RCT6
 //Hall_Sensor驱动程序 
-//引脚 PA0
+//引脚 PC0
 //电机速度存储在float型变量motor_speed中
 //HWY 2017 10 19
 //All rights reserved									  
@@ -18,19 +18,18 @@ static u32 count_last;//计数器上一次进中断计数值
 static u32 count_diff;//计数器差值
 float motor_speed=0.0;//电机转速
 
-void PA0_IPD_Init(void)
+void PC0_Hall_IPD_Init(void)
 {	
-	#ifdef USE_PA0_HALL_IPD
+	#ifdef USE_PC0_HALL_IPD
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	NVIC_InitTypeDef  NVIC_InitStructure;
 	EXTI_InitTypeDef  EXTI_InitStructure;
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);//开启GPIOA时钟
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//外部中断，需要使能AFIO时钟
+
 	
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 ;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;//下拉输入模式 
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
-	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,GPIO_PinSource0);
+  GPIO_Init(GPIOC, &GPIO_InitStructure);
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOC,GPIO_PinSource0);
   EXTI_InitStructure.EXTI_Line=EXTI_Line0;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
   EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
@@ -45,7 +44,7 @@ void PA0_IPD_Init(void)
 }
 
 
-#ifdef USE_PA0_HALL_IPD
+#ifdef USE_PC0_HALL_IPD
 void EXTI0_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line0)!=RESET)
@@ -80,7 +79,6 @@ void Timer2_Init(void)
 {
 	  NVIC_InitTypeDef  NVIC_InitStructure;
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);  			//使能TIM时钟
     TIM_TimeBaseInitStructure.TIM_Period = 0xFFFF; 				//自动重装载值  65535
     TIM_TimeBaseInitStructure.TIM_Prescaler=7200-1;  					//定时器分频  减小分辨率扩大计时时间           
     TIM_TimeBaseInitStructure.TIM_CounterMode=TIM_CounterMode_Up; 	//向上计数模式
@@ -93,6 +91,6 @@ void Timer2_Init(void)
 //Hall_Sensor初始化
 void Hall_Senor_Init(void)
 {
-	PA0_IPD_Init();
+	PC0_Hall_IPD_Init();
 	Timer2_Init();	
 }
