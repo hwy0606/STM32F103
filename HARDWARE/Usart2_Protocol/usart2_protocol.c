@@ -183,7 +183,6 @@ void USART2_BP_Response(u8 *USART_RECEIVE_DATA,u16 DATA_LEN)
 /*数据长度 0x0A*/
 /*数据类型码 0x03*/
 extern u8 SPO2_DATA[SPO2_DATA_LEN]; //直接用全局变量 不做传址
-extern u8 SPO2_FLAG; //血氧信息更新标志位
 void SPO2_Response()
 { 
 	//此处做一个CRC校验然后发送，发送完成后复位SPO2_FLAG标志位
@@ -191,7 +190,6 @@ void SPO2_Response()
   SPO2_DATA[8]=Get_ucCRCLo();//CRC校验码低8位
 	SPO2_DATA[9]=Get_ucCRCHi(); //CRC校验码高8位	
 	USART2_DMA_Send_Once_Data(SPO2_DATA,SPO2_DATA_LEN);
-  SPO2_FLAG=0;	
 }
 
 /*第四部分 速度通信协议*/

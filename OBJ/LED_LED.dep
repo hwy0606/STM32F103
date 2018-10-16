@@ -1,5 +1,5 @@
 Dependencies for Project 'LED', Target 'LED': (DO NOT MODIFY !)
-F (.\main.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5BC5ED47)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
@@ -30,22 +30,23 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BAF7194)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BAF7194)
-I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BAF7194)
-I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BAF7194)
-I (..\HARDWARE\PWM\pwm.h)(0x5BAF7194)
+I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BC56083)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BC56083)
+I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BC56083)
+I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BC56083)
+I (..\HARDWARE\PWM\pwm.h)(0x5BC56083)
 I (..\HARDWARE\Key\key.h)(0x5BAF70DE)
-I (..\HARDWARE\Motor_Control\motor_control.h)(0x5BAF7194)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Encoder\encoder.h)(0x5BAF7194)
-I (..\HARDWARE\RCC\rcc.h)(0x5BAF7194)
-I (..\HARDWARE\ADC\adc.h)(0x5BAF7194)
-I (..\HARDWARE\SPI\spi.h)(0x5BAF7194)
-F (.\stm32f10x_it.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
+I (..\HARDWARE\Motor_Control\motor_control.h)(0x5BC5E614)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Encoder\encoder.h)(0x5BC56083)
+I (..\HARDWARE\RCC\rcc.h)(0x5BC56083)
+I (..\HARDWARE\ADC\adc.h)(0x5BC56083)
+I (..\HARDWARE\SPI\spi.h)(0x5BC56083)
+I (..\HARDWARE\Flash\flash.h)(0x5BC5ED9E)
+F (.\stm32f10x_it.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x5BAF70DF)
 I (stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -76,7 +77,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (.\system_stm32f10x.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\system_stm32f10x.o --omf_browse ..\obj\system_stm32f10x.crf --depend ..\obj\system_stm32f10x.d)
+F (.\system_stm32f10x.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\system_stm32f10x.o --omf_browse ..\obj\system_stm32f10x.crf --depend ..\obj\system_stm32f10x.d)
 I (stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -106,9 +107,9 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (.\project_config.h)(0x5BAF71B6)()
-F (..\HARDWARE\Usart1_DMA\usart1_dma.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart1_dma.o --omf_browse ..\obj\usart1_dma.crf --depend ..\obj\usart1_dma.d)
-I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BAF7194)
+F (.\project_config.h)(0x5BC5E2AC)()
+F (..\HARDWARE\Usart1_DMA\usart1_dma.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart1_dma.o --omf_browse ..\obj\usart1_dma.crf --depend ..\obj\usart1_dma.d)
+I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -138,14 +139,14 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BAF7194)
-F (..\HARDWARE\Usart2_DMA\usart2_dma.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2_dma.o --omf_browse ..\obj\usart2_dma.crf --depend ..\obj\usart2_dma.d)
-I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BAF7194)
+I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BC56083)
+F (..\HARDWARE\Usart2_DMA\usart2_dma.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2_dma.o --omf_browse ..\obj\usart2_dma.crf --depend ..\obj\usart2_dma.d)
+I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -175,50 +176,15 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
-I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BAF7194)
-I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BAF7194)
-F (..\HARDWARE\Usart3_DMA\usart3_dma.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart3_dma.o --omf_browse ..\obj\usart3_dma.crf --depend ..\obj\usart3_dma.d)
-I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BAF7194)
-I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
-I (..\USER\stm32f10x.h)(0x5BAF70DF)
-I (..\CORE\core_cm3.h)(0x5BAF70DE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\USER\system_stm32f10x.h)(0x5BAF70DF)
-I (..\USER\stm32f10x_conf.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_adc.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_bkp.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_can.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_cec.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_crc.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_dac.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_dma.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_flash.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_i2c.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_pwr.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_rtc.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_sdio.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
-I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
-F (..\HARDWARE\PWM\pwm.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
-I (..\HARDWARE\PWM\pwm.h)(0x5BAF7194)
+I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BC56083)
+I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BC56083)
+F (..\HARDWARE\Usart3_DMA\usart3_dma.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart3_dma.o --omf_browse ..\obj\usart3_dma.crf --depend ..\obj\usart3_dma.d)
+I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -248,8 +214,43 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-F (..\HARDWARE\Key\key.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
+F (..\HARDWARE\PWM\pwm.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
+I (..\HARDWARE\PWM\pwm.h)(0x5BC56083)
+I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
+I (..\USER\stm32f10x.h)(0x5BAF70DF)
+I (..\CORE\core_cm3.h)(0x5BAF70DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\USER\system_stm32f10x.h)(0x5BAF70DF)
+I (..\USER\stm32f10x_conf.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_adc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_bkp.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_can.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_cec.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_crc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dac.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dma.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_flash.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_i2c.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_pwr.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rtc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_sdio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+F (..\HARDWARE\Key\key.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
 I (..\HARDWARE\Key\key.h)(0x5BAF70DE)
 I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
@@ -279,12 +280,12 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
-F (..\HARDWARE\Usart1_Protocol\usart1_protocol.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart1_protocol.o --omf_browse ..\obj\usart1_protocol.crf --depend ..\obj\usart1_protocol.d)
-I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BAF7194)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
+F (..\HARDWARE\Usart1_Protocol\usart1_protocol.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart1_protocol.o --omf_browse ..\obj\usart1_protocol.crf --depend ..\obj\usart1_protocol.d)
+I (..\HARDWARE\Usart1_Protocol\usart1_protocol.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -314,12 +315,12 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BAF7194)
-I (..\HARDWARE\CRC_16\crc_16.h)(0x5BAF7194)
-F (..\HARDWARE\CRC_16\crc_16.c)(0x5BAF70DE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\crc_16.o --omf_browse ..\obj\crc_16.crf --depend ..\obj\crc_16.d)
-I (..\HARDWARE\CRC_16\crc_16.h)(0x5BAF7194)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Usart1_DMA\usart1_dma.h)(0x5BC56083)
+I (..\HARDWARE\CRC_16\crc_16.h)(0x5BC56083)
+F (..\HARDWARE\CRC_16\crc_16.c)(0x5BC59D71)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\crc_16.o --omf_browse ..\obj\crc_16.crf --depend ..\obj\crc_16.d)
+I (..\HARDWARE\CRC_16\crc_16.h)(0x5BC56083)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -348,8 +349,8 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\HARDWARE\Usart3_Protocol\usart3_protocol.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart3_protocol.o --omf_browse ..\obj\usart3_protocol.crf --depend ..\obj\usart3_protocol.d)
-I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BAF7194)
+F (..\HARDWARE\Usart3_Protocol\usart3_protocol.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart3_protocol.o --omf_browse ..\obj\usart3_protocol.crf --depend ..\obj\usart3_protocol.d)
+I (..\HARDWARE\Usart3_Protocol\usart3_protocol.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -379,10 +380,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BAF7194)
-F (..\HARDWARE\GPIO\gpio.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gpio.o --omf_browse ..\obj\gpio.crf --depend ..\obj\gpio.d)
-I (..\HARDWARE\GPIO\gpio.h)(0x5BAF7194)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Usart3_DMA\usart3_dma.h)(0x5BC56083)
+F (..\HARDWARE\GPIO\gpio.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gpio.o --omf_browse ..\obj\gpio.crf --depend ..\obj\gpio.d)
+I (..\HARDWARE\GPIO\gpio.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -412,9 +413,9 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-F (..\HARDWARE\Motor_Control\motor_control.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\motor_control.o --omf_browse ..\obj\motor_control.crf --depend ..\obj\motor_control.d)
-I (..\HARDWARE\Motor_Control\motor_control.h)(0x5BAF7194)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+F (..\HARDWARE\Motor_Control\motor_control.c)(0x5BC5ED55)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\motor_control.o --omf_browse ..\obj\motor_control.crf --depend ..\obj\motor_control.d)
+I (..\HARDWARE\Motor_Control\motor_control.h)(0x5BC5E614)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -444,11 +445,11 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\PWM\pwm.h)(0x5BAF7194)
-I (..\HARDWARE\GPIO\gpio.h)(0x5BAF7194)
-F (..\HARDWARE\Usart2_Protocol\usart2_protocol.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2_protocol.o --omf_browse ..\obj\usart2_protocol.crf --depend ..\obj\usart2_protocol.d)
-I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BAF7194)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\PWM\pwm.h)(0x5BC56083)
+I (..\HARDWARE\GPIO\gpio.h)(0x5BC56083)
+F (..\HARDWARE\Usart2_Protocol\usart2_protocol.c)(0x5BC5E659)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2_protocol.o --omf_browse ..\obj\usart2_protocol.crf --depend ..\obj\usart2_protocol.d)
+I (..\HARDWARE\Usart2_Protocol\usart2_protocol.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -478,10 +479,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BAF7194)
-I (..\HARDWARE\CRC_16\crc_16.h)(0x5BAF7194)
-F (..\HARDWARE\Encoder\encoder.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Usart2_DMA\usart2_dma.h)(0x5BC56083)
+I (..\HARDWARE\CRC_16\crc_16.h)(0x5BC56083)
+F (..\HARDWARE\Encoder\encoder.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -510,10 +511,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\HARDWARE\Encoder\encoder.h)(0x5BAF7194)
+I (..\HARDWARE\Encoder\encoder.h)(0x5BC56083)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (..\USER\project_config.h)(0x5BAF71B6)
-F (..\HARDWARE\RCC\rcc.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\rcc.o --omf_browse ..\obj\rcc.crf --depend ..\obj\rcc.d)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+F (..\HARDWARE\RCC\rcc.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\rcc.o --omf_browse ..\obj\rcc.crf --depend ..\obj\rcc.d)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -543,10 +544,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\HARDWARE\RCC\rcc.h)(0x5BAF7194)
-I (..\USER\project_config.h)(0x5BAF71B6)
-F (..\HARDWARE\Usart5_DMA\usart5_dma.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart5_dma.o --omf_browse ..\obj\usart5_dma.crf --depend ..\obj\usart5_dma.d)
-I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BAF7194)
+I (..\HARDWARE\RCC\rcc.h)(0x5BC56083)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+F (..\HARDWARE\Usart5_DMA\usart5_dma.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart5_dma.o --omf_browse ..\obj\usart5_dma.crf --depend ..\obj\usart5_dma.d)
+I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -576,11 +577,11 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BAF7194)
-F (..\HARDWARE\Usart5_Protocol\usart5_protocol.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart5_protocol.o --omf_browse ..\obj\usart5_protocol.crf --depend ..\obj\usart5_protocol.d)
-I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BAF7194)
+I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BC56083)
+F (..\HARDWARE\Usart5_Protocol\usart5_protocol.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart5_protocol.o --omf_browse ..\obj\usart5_protocol.crf --depend ..\obj\usart5_protocol.d)
+I (..\HARDWARE\Usart5_Protocol\usart5_protocol.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -610,10 +611,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BAF7194)
-F (..\HARDWARE\ADC\adc.c)(0x5BAF7194)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
-I (..\HARDWARE\ADC\adc.h)(0x5BAF7194)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Usart5_DMA\usart5_dma.h)(0x5BC56083)
+F (..\HARDWARE\ADC\adc.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
+I (..\HARDWARE\ADC\adc.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -643,10 +644,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
+I (..\USER\project_config.h)(0x5BC5E2AC)
 I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
-F (..\HARDWARE\SPI\spi.c)(0x5BAF71B6)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\spi.o --omf_browse ..\obj\spi.crf --depend ..\obj\spi.d)
-I (..\HARDWARE\SPI\spi.h)(0x5BAF7194)
+F (..\HARDWARE\SPI\spi.c)(0x5BC56083)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\spi.o --omf_browse ..\obj\spi.crf --depend ..\obj\spi.d)
+I (..\HARDWARE\SPI\spi.h)(0x5BC56083)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -676,8 +677,41 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-I (..\USER\project_config.h)(0x5BAF71B6)
-F (..\SYSTEM\delay\delay.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+F (..\HARDWARE\Flash\flash.c)(0x5BC5EDA4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\flash.o --omf_browse ..\obj\flash.crf --depend ..\obj\flash.d)
+I (..\USER\project_config.h)(0x5BC5E2AC)
+I (..\HARDWARE\Flash\flash.h)(0x5BC5ED9E)
+I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
+I (..\USER\stm32f10x.h)(0x5BAF70DF)
+I (..\CORE\core_cm3.h)(0x5BAF70DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\USER\system_stm32f10x.h)(0x5BAF70DF)
+I (..\USER\stm32f10x_conf.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_adc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_bkp.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_can.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_cec.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_crc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dac.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dma.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_flash.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_i2c.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_pwr.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rtc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_sdio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
+I (..\HARDWARE\Motor_Control\motor_control.h)(0x5BC5E614)
+F (..\SYSTEM\delay\delay.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
 I (..\SYSTEM\delay\delay.h)(0x5BAF70DF)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
@@ -708,7 +742,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\SYSTEM\sys\sys.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
+F (..\SYSTEM\sys\sys.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
 I (..\SYSTEM\sys\sys.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -738,10 +772,10 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\CORE\core_cm3.c)(0x5BAF70DE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\core_cm3.o --omf_browse ..\obj\core_cm3.crf --depend ..\obj\core_cm3.d)
+F (..\CORE\core_cm3.c)(0x5BAF70DE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\core_cm3.o --omf_browse ..\obj\core_cm3.crf --depend ..\obj\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 F (..\CORE\startup_stm32f10x_hd.s)(0x5BAF70DE)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "STM32F10X_HD SETA 1"--list .\startup_stm32f10x_hd.lst --xref -o ..\obj\startup_stm32f10x_hd.o --depend ..\obj\startup_stm32f10x_hd.d)
-F (..\STM32F10x_FWLib\src\stm32f10x_gpio.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_gpio.o --omf_browse ..\obj\stm32f10x_gpio.crf --depend ..\obj\stm32f10x_gpio.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_gpio.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_gpio.o --omf_browse ..\obj\stm32f10x_gpio.crf --depend ..\obj\stm32f10x_gpio.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -770,7 +804,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_rcc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_rcc.o --omf_browse ..\obj\stm32f10x_rcc.crf --depend ..\obj\stm32f10x_rcc.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_rcc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_rcc.o --omf_browse ..\obj\stm32f10x_rcc.crf --depend ..\obj\stm32f10x_rcc.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -799,7 +833,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_usart.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_usart.o --omf_browse ..\obj\stm32f10x_usart.crf --depend ..\obj\stm32f10x_usart.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_usart.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_usart.o --omf_browse ..\obj\stm32f10x_usart.crf --depend ..\obj\stm32f10x_usart.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -828,7 +862,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\misc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
+F (..\STM32F10x_FWLib\src\misc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -857,7 +891,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_dma.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_dma.o --omf_browse ..\obj\stm32f10x_dma.crf --depend ..\obj\stm32f10x_dma.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_dma.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_dma.o --omf_browse ..\obj\stm32f10x_dma.crf --depend ..\obj\stm32f10x_dma.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_dma.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -886,7 +920,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_tim.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_tim.o --omf_browse ..\obj\stm32f10x_tim.crf --depend ..\obj\stm32f10x_tim.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_tim.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_tim.o --omf_browse ..\obj\stm32f10x_tim.crf --depend ..\obj\stm32f10x_tim.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -915,7 +949,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_exti.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_exti.o --omf_browse ..\obj\stm32f10x_exti.crf --depend ..\obj\stm32f10x_exti.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_exti.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_exti.o --omf_browse ..\obj\stm32f10x_exti.crf --depend ..\obj\stm32f10x_exti.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -944,7 +978,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_crc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_crc.o --omf_browse ..\obj\stm32f10x_crc.crf --depend ..\obj\stm32f10x_crc.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_crc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_crc.o --omf_browse ..\obj\stm32f10x_crc.crf --depend ..\obj\stm32f10x_crc.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_crc.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -973,7 +1007,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_adc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_adc.o --omf_browse ..\obj\stm32f10x_adc.crf --depend ..\obj\stm32f10x_adc.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_adc.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_adc.o --omf_browse ..\obj\stm32f10x_adc.crf --depend ..\obj\stm32f10x_adc.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_adc.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -1002,7 +1036,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\STM32F10x_FWLib\src\stm32f10x_spi.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_spi.o --omf_browse ..\obj\stm32f10x_spi.crf --depend ..\obj\stm32f10x_spi.d)
+F (..\STM32F10x_FWLib\src\stm32f10x_spi.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_spi.o --omf_browse ..\obj\stm32f10x_spi.crf --depend ..\obj\stm32f10x_spi.d)
 I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
 I (..\USER\stm32f10x.h)(0x5BAF70DF)
 I (..\CORE\core_cm3.h)(0x5BAF70DE)
@@ -1031,4 +1065,33 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
-F (..\README.TXT)(0x5BAF7194)()
+F (..\STM32F10x_FWLib\src\stm32f10x_flash.c)(0x5BAF70DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\Usart1_DMA -I ..\STM32F10x_FWLib\src -I ..\HARDWARE\Usart2_DMA -I ..\HARDWARE\Usart3_DMA -I ..\HARDWARE\PWM -I ..\HARDWARE\GPIO -I ..\HARDWARE\Hall_Sensor -I ..\HARDWARE\Key -I ..\HARDWARE\Encoder -I ..\HARDWARE\CRC_16 -I ..\HARDWARE\Usart1_Protocol -I ..\HARDWARE\Usart3_Protocol -I ..\HARDWARE\Motor_Control -I ..\HARDWARE\Usart2_Protocol -I ..\HARDWARE\Usart5_DMA -I ..\HARDWARE\Usart5_Protocol -I ..\HARDWARE\ADC -I ..\HARDWARE\RCC -I ..\HARDWARE\SPI -I ..\HARDWARE\Flash-I.\RTE\_LED-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_flash.o --omf_browse ..\obj\stm32f10x_flash.crf --depend ..\obj\stm32f10x_flash.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_flash.h)(0x5BAF70DF)
+I (..\USER\stm32f10x.h)(0x5BAF70DF)
+I (..\CORE\core_cm3.h)(0x5BAF70DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\USER\system_stm32f10x.h)(0x5BAF70DF)
+I (..\USER\stm32f10x_conf.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_adc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_bkp.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_can.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_cec.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_crc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dac.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dma.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_i2c.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_pwr.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rtc.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_sdio.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5BAF70DF)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x5BAF70DF)
+F (..\README.TXT)(0x5BC59690)()

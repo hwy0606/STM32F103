@@ -22,15 +22,95 @@ Dialog DLL:        TARMSTM.DLL
  
 <h2>Project:</h2>
 C:\Users\DELL\Documents\STM32F103\USER\LED.uvprojx
-Project File Date:  09/29/2018
+Project File Date:  10/16/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LED'
+compiling main.c...
+..\HARDWARE\PWM\pwm.h(8): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\HARDWARE\PWM\pwm.h(10): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifdef USE_PWM_CH3 ||USE_PWM_CH4
+..\HARDWARE\PWM\pwm.h(11): warning:  #1295-D: Deprecated declaration PWM_Init_Default - give arg types
+  void PWM_Init_Default();
+..\HARDWARE\Motor_Control\motor_control.h(7): warning:  #1295-D: Deprecated declaration Actuator_Init - give arg types
+  void Actuator_Init();
+..\HARDWARE\Motor_Control\motor_control.h(11): warning:  #1295-D: Deprecated declaration Seat_High - give arg types
+  void Seat_High();
+..\HARDWARE\Motor_Control\motor_control.h(12): warning:  #1295-D: Deprecated declaration Seat_Low - give arg types
+  void Seat_Low();
+..\HARDWARE\Motor_Control\motor_control.h(17): warning:  #1295-D: Deprecated declaration Backup_Init - give arg types
+  void Backup_Init();
+..\HARDWARE\Motor_Control\motor_control.h(24): warning:  #1295-D: Deprecated declaration Get_Seat_Height - give arg types
+  u16 Get_Seat_Height();
+..\HARDWARE\Motor_Control\motor_control.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(8): warning:  #1295-D: Deprecated declaration USART2_Key_Init - give arg types
+  void USART2_Key_Init(); //按键传输协议初始化
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(11): warning:  #1295-D: Deprecated declaration KEY1_Response - give arg types
+  void KEY1_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(18): warning:  #1295-D: Deprecated declaration KEY6_Response - give arg types
+  void KEY6_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(21): warning:  #1295-D: Deprecated declaration KEY7_Response - give arg types
+  void KEY7_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(24): warning:  #1295-D: Deprecated declaration KEY8_Response - give arg types
+  void KEY8_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(27): warning:  #1295-D: Deprecated declaration KEY9_Response - give arg types
+  void KEY9_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(30): warning:  #1295-D: Deprecated declaration KEY10_Response - give arg types
+  void KEY10_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(33): warning:  #1295-D: Deprecated declaration KEY11_Response - give arg types
+  void KEY11_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(39): warning:  #1295-D: Deprecated declaration SPO2_Response - give arg types
+  void SPO2_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(40): warning:  #1295-D: Deprecated declaration USART2_Speed_Init - give arg types
+  void USART2_Speed_Init();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(41): warning:  #1295-D: Deprecated declaration Speed_Response - give arg types
+  void Speed_Response();
+..\HARDWARE\Usart2_Protocol\usart2_protocol.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart3_Protocol\usart3_protocol.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Usart5_Protocol\usart5_protocol.h(5): warning:  #1295-D: Deprecated declaration UART5_Sensor_Init - give arg types
+  void UART5_Sensor_Init();
+..\HARDWARE\RCC\rcc.h(6): warning:  #1295-D: Deprecated declaration RCC_Init - give arg types
+  void RCC_Init();
+..\HARDWARE\RCC\rcc.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\ADC\adc.h(10): warning:  #1295-D: Deprecated declaration Average - give arg types
+  u16 Average(); //取平均值函数
+..\HARDWARE\Flash\flash.h(9): warning:  #1295-D: Deprecated declaration Flash_Buffer_Init - give arg types
+  void Flash_Buffer_Init();
+..\HARDWARE\Flash\flash.h(10): warning:  #1295-D: Deprecated declaration Set_Flash_Buffer - give arg types
+  void Set_Flash_Buffer();
+..\HARDWARE\Flash\flash.h(11): warning:  #1295-D: Deprecated declaration Get_Flash_Buffer - give arg types
+  void Get_Flash_Buffer();
+main.c: 29 warnings, 0 errors
+compiling flash.c...
+..\HARDWARE\Flash\flash.h(9): warning:  #1295-D: Deprecated declaration Flash_Buffer_Init - give arg types
+  void Flash_Buffer_Init();
+..\HARDWARE\Flash\flash.h(10): warning:  #1295-D: Deprecated declaration Set_Flash_Buffer - give arg types
+  void Set_Flash_Buffer();
+..\HARDWARE\Flash\flash.h(11): warning:  #1295-D: Deprecated declaration Get_Flash_Buffer - give arg types
+  void Get_Flash_Buffer();
+..\HARDWARE\Motor_Control\motor_control.h(7): warning:  #1295-D: Deprecated declaration Actuator_Init - give arg types
+  void Actuator_Init();
+..\HARDWARE\Motor_Control\motor_control.h(11): warning:  #1295-D: Deprecated declaration Seat_High - give arg types
+  void Seat_High();
+..\HARDWARE\Motor_Control\motor_control.h(12): warning:  #1295-D: Deprecated declaration Seat_Low - give arg types
+  void Seat_Low();
+..\HARDWARE\Motor_Control\motor_control.h(17): warning:  #1295-D: Deprecated declaration Backup_Init - give arg types
+  void Backup_Init();
+..\HARDWARE\Motor_Control\motor_control.h(24): warning:  #1295-D: Deprecated declaration Get_Seat_Height - give arg types
+  u16 Get_Seat_Height();
+..\HARDWARE\Motor_Control\motor_control.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\Flash\flash.c: 9 warnings, 0 errors
 linking...
-Program Size: Code=15844 RO-data=848 RW-data=92 ZI-data=2884  
+Program Size: Code=18712 RO-data=848 RW-data=100 ZI-data=4932  
 FromELF: creating hex file...
-"..\OBJ\STM32.axf" - 0 Error(s), 0 Warning(s).
+"..\OBJ\STM32.axf" - 0 Error(s), 38 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_LED

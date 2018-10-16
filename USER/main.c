@@ -15,10 +15,13 @@
 #include "rcc.h"
 #include "adc.h"
 #include "spi.h"
+#include "flash.h"
 /*
 注释 2018 10.16
 */
  extern u8 SPO2_FLAG;
+ extern u8 SEAT_FLAG;
+ extern u8 FLASH_FLAG;
  /*******************************************************************************
   * @函数名称	main
   * @函数说明   主函数 注意设置中断向量表偏移
@@ -46,7 +49,7 @@
 	UART5_Init(USART5_BaudRate);
 	ADC_Sensor_Init();
 	 
-	 
+	Flash_Buffer_Init(); 
 	u16 Send_Size =5;
 	u8 Send_Date[Send_Size];
 	Send_Date[0]=0x01;
@@ -60,15 +63,27 @@
 //  Set_PWM_CH4_Duty_Cycle(30);
 //  delay_ms(1000);
 	USART3_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口3
-
+ 
 //  UART5_Send_Once_Data(Send_Date,Send_Size); 
 //	USART2_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口2
+
+	delay_ms(1000); //等待1S使系统稳定下来
+  Get_Flash_Buffer(); //更新掉电信息 （座椅高度信息）
 	while(1)
 	{
+		
 		//循环检测血氧信息是否需要更新
-    if(SPO2_FLAG==1)  //需要更新血氧信息 UART5没用DMA所以占用资源过多
+    if(SPO2_FLAG==1)  //需要更新血氧信息 UART5没用DMA所以占用资源过多 采用更新发送
 		{
 			SPO2_Response();
+			SPO2_FLAG=0x00;
+		}
+		FLASH_FLAG=SEAT_FLAG || 0x01; //判断FLASH掉电信息是否需要保存 所有FLAG位或运算
+		if(FLASH_FLAG==1)  //座椅高度更新
+		{
+			Set_Flash_Buffer();
+			SEAT_FLAG=0x00;
+			FLASH_FLAG=0x00;
 		}
 	}
  }
