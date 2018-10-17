@@ -31,6 +31,9 @@
 ..\obj\usart5_protocol.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart5_protocol.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\usart5_protocol.o: ..\USER\project_config.h
+..\obj\usart5_protocol.o: ..\USER\NVIC_Priority.h
 ..\obj\usart5_protocol.o: ..\HARDWARE\Usart5_DMA\usart5_dma.h
 ..\obj\usart5_protocol.o: ..\USER\project_config.h
+..\obj\usart5_protocol.o: ..\USER\NVIC_Priority.h
 ..\obj\usart5_protocol.o: ..\USER\project_config.h
+..\obj\usart5_protocol.o: ..\USER\NVIC_Priority.h

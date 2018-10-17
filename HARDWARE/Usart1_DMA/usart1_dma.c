@@ -72,8 +72,8 @@ void USART1_DMA_Init(u32 baud)
     USART_ITConfig(USART1,USART_IT_IDLE,ENABLE);     		  	  //打开空闲中断 用来接收不定长数据
        
     NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;             //通道设置为串口中断    
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  //中断占先等级  
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;         //中断响应优先级   
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = USART1_IRQ_PreemptionPriority;  //中断占先等级  
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = USART1_IRQ_SubPriority;         //中断响应优先级   
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;               //打开中断    
     NVIC_Init(&NVIC_InitStructure);     
           
@@ -91,8 +91,8 @@ void USART1_DMA_Init(u32 baud)
 		
 		
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel4_IRQn;  		
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  		
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;  			
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = USART1_DMA_PreemptionPriority;  		
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = USART1_DMA_SubPriority;  			
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;  				
     NVIC_Init(&NVIC_InitStructure);  								
      

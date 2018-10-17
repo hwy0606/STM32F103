@@ -31,8 +31,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = PB1_KEY_PreemptionPriority;	//抢占优先级1 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = PB1_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -48,8 +48,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = PB2_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = PB2_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -66,8 +66,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = ELSE_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = ELSE_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -83,8 +83,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = ELSE_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = ELSE_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -100,8 +100,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = ELSE_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = ELSE_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -117,8 +117,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = ELSE_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = ELSE_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
@@ -134,13 +134,13 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = ELSE_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = ELSE_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif
 	
-		#ifdef USE_PB10_KEY
+		#ifdef USE_PB11_KEY
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 ;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;//上拉输入模式 
   GPIO_Init(GPIOB, &GPIO_InitStructure);
@@ -151,8 +151,8 @@ void KEY_Init(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);		//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;			//使能按键所在的外部中断通道
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//抢占优先级2 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//子优先级1
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = PB11_KEY_PreemptionPriority;	//抢占优先级2 
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = PB11_KEY_SubPriority;					//子优先级1
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
   NVIC_Init(&NVIC_InitStructure);  	  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器
 	#endif

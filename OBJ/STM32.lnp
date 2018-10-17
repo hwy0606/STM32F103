@@ -20,6 +20,7 @@
 "..\obj\adc.o"
 "..\obj\spi.o"
 "..\obj\flash.o"
+"..\obj\malloc.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"

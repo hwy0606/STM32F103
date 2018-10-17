@@ -10,9 +10,6 @@
 //HWY 2017 10 20
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 	 
-
-
-
 unsigned short int adc_value[ADC_BUF_LEN];  //结果数组
 
 #ifdef USE_PA0_ADC1_IN0
@@ -68,7 +65,7 @@ void ADC_Sensor_Init(void)
 		while(ADC_GetCalibrationStatus(ADC1));//等待校准完成
 
 
-    //开启ADC2的软件转换  
+    //开启ADC1的软件转换  
 		ADC_SoftwareStartConvCmd(ADC1,ENABLE);      
 }
   
@@ -85,7 +82,6 @@ u16 Average()
 	return sum;	
 }
 
-//采样均值滤波，后期可根据实际需要优化滤波算法
 
 #endif
 

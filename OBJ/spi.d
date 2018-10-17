@@ -31,3 +31,4 @@
 ..\obj\spi.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\spi.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\spi.o: ..\USER\project_config.h
+..\obj\spi.o: ..\USER\NVIC_Priority.h

@@ -16,8 +16,11 @@
 #include "adc.h"
 #include "spi.h"
 #include "flash.h"
+#include "malloc.h"
 /*
-注释 2018 10.16
+注释 2018 10.17 
+SRAM 48K
+FLASH 256K
 */
  extern u8 SPO2_FLAG;
  extern u8 SEAT_FLAG;
@@ -47,9 +50,12 @@
 	USART2_DMA_Init(USART2_BaudRate);		
   USART3_DMA_Init(USART3_BaudRate);	
 	UART5_Init(USART5_BaudRate);
-	ADC_Sensor_Init();
-	 
+	 	 
+	ADC_Sensor_Init();	 
 	Flash_Buffer_Init(); 
+	SPI2_Init();
+  Hall_Senor_Init();
+	
 	u16 Send_Size =5;
 	u8 Send_Date[Send_Size];
 	Send_Date[0]=0x01;
@@ -57,18 +63,17 @@
 	Send_Date[2]=0x0C;
 	Send_Date[3]=0x0D;
 	Send_Date[4]=0x0A;	 
-	SPI2_Init();
-  Hall_Senor_Init();
-//  PWM_Init_Default();
-//  Set_PWM_CH4_Duty_Cycle(30);
-//  delay_ms(1000);
-	USART3_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口3
- 
-//  UART5_Send_Once_Data(Send_Date,Send_Size); 
-//	USART2_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口2
 
+
+	USART3_DMA_Send_Once_Data(Send_Date,Send_Size);  //测试的时候找到串口3
+
+	
+	mem_init(); //初始化内存管理 目前可供管理空间为20K 后期进一步优化
+		
 	delay_ms(1000); //等待1S使系统稳定下来
   Get_Flash_Buffer(); //更新掉电信息 （座椅高度信息）
+	
+	
 	while(1)
 	{
 		
@@ -78,8 +83,9 @@
 			SPO2_Response();
 			SPO2_FLAG=0x00;
 		}
+		
 		FLASH_FLAG=SEAT_FLAG || 0x01; //判断FLASH掉电信息是否需要保存 所有FLAG位或运算
-		if(FLASH_FLAG==1)  //座椅高度更新
+		if(FLASH_FLAG==1)  //座椅高度更新 OR 
 		{
 			Set_Flash_Buffer();
 			SEAT_FLAG=0x00;

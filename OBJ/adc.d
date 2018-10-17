@@ -31,5 +31,7 @@
 ..\obj\adc.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\adc.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\adc.o: ..\USER\project_config.h
+..\obj\adc.o: ..\USER\NVIC_Priority.h
 ..\obj\adc.o: ..\SYSTEM\delay\delay.h
 ..\obj\adc.o: ..\USER\project_config.h
+..\obj\adc.o: ..\USER\NVIC_Priority.h

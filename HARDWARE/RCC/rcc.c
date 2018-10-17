@@ -92,11 +92,15 @@ void RCC_Init()
 	RCC_APB2PeriphClockCmd(OE_GPIO_RCC,ENABLE);	 //使能PC端口时钟
 	#endif
 	
+	
+	/* ADC PA0 */
 	#ifdef USE_PA0_ADC1_IN0
 	RCC_APB2PeriphClockCmd(ADC_RCC, ENABLE);   		
 	RCC_AHBPeriphClockCmd(DMA_RCC,ENABLE);
 	#endif
 	
+	
+	/* SPI */
 	#ifdef USE_SPI_7277
 	RCC_APB2PeriphClockCmd(SPI_GPIO_RCC,ENABLE );	
 	RCC_APB1PeriphClockCmd(SPI_RCC,ENABLE );	

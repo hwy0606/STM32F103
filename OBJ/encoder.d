@@ -31,3 +31,4 @@
 ..\obj\encoder.o: ..\HARDWARE\Encoder\encoder.h
 ..\obj\encoder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\encoder.o: ..\USER\project_config.h
+..\obj\encoder.o: ..\USER\NVIC_Priority.h

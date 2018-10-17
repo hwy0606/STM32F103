@@ -67,8 +67,8 @@ void USART3_DMA_Init(u32 baud)
     USART_ITConfig(USART3,USART_IT_IDLE,ENABLE);     		  	  //打开空闲中断
        
     NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;             //通道设置为串口中断    
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;  //中断占先等级  
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;         //中断响应优先级   
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = USART3_IRQ_PreemptionPriority;  //中断占先等级  
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = USART3_IRQ_SubPriority;         //中断响应优先级   
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;               //打开中断    
     NVIC_Init(&NVIC_InitStructure);     
           
@@ -84,8 +84,8 @@ void USART3_DMA_Init(u32 baud)
     
     /* DMA发送中断设置 */ 
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel2_IRQn;  		
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  		
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;  			
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = USART3_DMA_PreemptionPriority;  		
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = USART3_DMA_SubPriority;  			
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;  				
     NVIC_Init(&NVIC_InitStructure);  								
      

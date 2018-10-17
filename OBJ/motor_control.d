@@ -31,7 +31,10 @@
 ..\obj\motor_control.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\motor_control.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\motor_control.o: ..\USER\project_config.h
+..\obj\motor_control.o: ..\USER\NVIC_Priority.h
 ..\obj\motor_control.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\motor_control.o: ..\USER\project_config.h
+..\obj\motor_control.o: ..\USER\NVIC_Priority.h
 ..\obj\motor_control.o: ..\HARDWARE\GPIO\gpio.h
 ..\obj\motor_control.o: ..\USER\project_config.h
+..\obj\motor_control.o: ..\USER\NVIC_Priority.h

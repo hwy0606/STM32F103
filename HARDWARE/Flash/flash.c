@@ -3,6 +3,8 @@
 //写入芯片板载FLASH 保存掉电信息
 //每次写入16位 半字节
 //所以Flash_Buffer 为u16数组
+//可使能宏定义配置malloc内存管理
+//目前大数组还只有这个STMFLASH_BUF
 //HWY 2018 10 16
 //All rights reserved									  
 //////////////////////////////////////////////////////////////////////////////////
@@ -11,6 +13,7 @@
 #include "flash.h"
 #include "stm32f10x_flash.h"
 #include "motor_control.h"
+
 u8 FLASH_FLAG=0x00;
 extern u8 SEAT_FLAG;
 #define Flash_Buffer_Size 2
@@ -46,8 +49,9 @@ void STMFLASH_Write_NoCheck(u32 WriteAddr,u16 *pBuffer,u16 NumToWrite)
 #define STM_SECTOR_SIZE 1024 //字节
 #else 
 #define STM_SECTOR_SIZE	2048  //每页字节数
-#endif		 
-u16 STMFLASH_BUF[STM_SECTOR_SIZE/2];//最多是2K字节
+#endif	
+
+
 void STMFLASH_Write(u32 WriteAddr,u16 *pBuffer,u16 NumToWrite)	
 {
 	u32 secpos;	   //扇区地址
@@ -62,6 +66,16 @@ void STMFLASH_Write(u32 WriteAddr,u16 *pBuffer,u16 NumToWrite)
 	secoff=(offaddr%STM_SECTOR_SIZE)/2;		//在扇区内的偏移(2个字节为基本单位.)
 	secremain=STM_SECTOR_SIZE/2-secoff;		//扇区剩余空间大小   
 	if(NumToWrite<=secremain)secremain=NumToWrite;//不大于该扇区范围
+	
+	/*判断是否使用内存管理 */
+	#ifdef USE_MEM_MALLOC
+  #include "malloc.h"
+  u16 *STMFLASH_BUF=0;
+  STMFLASH_BUF=mymalloc(STM_SECTOR_SIZE/2); //申请2K字节空间
+  #else
+  u16 STMFLASH_BUF[STM_SECTOR_SIZE/2];    //最多是2K字节
+  #endif
+	
 	while(1) 
 	{	
 		STMFLASH_Read(secpos*STM_SECTOR_SIZE+STM32_FLASH_BASE,STMFLASH_BUF,STM_SECTOR_SIZE/2);//读出整个扇区的内容
@@ -90,6 +104,12 @@ void STMFLASH_Write(u32 WriteAddr,u16 *pBuffer,u16 NumToWrite)
 			else secremain=NumToWrite;//下一个扇区可以写完了
 		}	 
 	};	
+	
+	/*如使用内存管理，则用完后释放内存*/
+	#ifdef USE_MEM_MALLOC
+	myfree(STMFLASH_BUF);	//释放内存
+	STMFLASH_BUF=0;		//指向空地址
+	#endif
 	FLASH_Lock();//上锁
 }
 #endif

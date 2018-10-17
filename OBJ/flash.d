@@ -1,5 +1,6 @@
 ..\obj\flash.o: ..\HARDWARE\Flash\flash.c
 ..\obj\flash.o: ..\USER\project_config.h
+..\obj\flash.o: ..\USER\NVIC_Priority.h
 ..\obj\flash.o: ..\HARDWARE\Flash\flash.h
 ..\obj\flash.o: ..\SYSTEM\sys\sys.h
 ..\obj\flash.o: ..\USER\stm32f10x.h
@@ -32,5 +33,8 @@
 ..\obj\flash.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\flash.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\flash.o: ..\USER\project_config.h
+..\obj\flash.o: ..\USER\NVIC_Priority.h
 ..\obj\flash.o: ..\HARDWARE\Motor_Control\motor_control.h
 ..\obj\flash.o: ..\USER\project_config.h
+..\obj\flash.o: ..\USER\NVIC_Priority.h
+..\obj\flash.o: ..\HARDWARE\MALLOC\malloc.h

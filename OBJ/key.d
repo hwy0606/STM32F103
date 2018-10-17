@@ -31,7 +31,9 @@
 ..\obj\key.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\key.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\key.o: ..\USER\project_config.h
+..\obj\key.o: ..\USER\NVIC_Priority.h
 ..\obj\key.o: ..\SYSTEM\delay\delay.h
 ..\obj\key.o: ..\SYSTEM\sys\sys.h
 ..\obj\key.o: ..\HARDWARE\Usart2_Protocol\usart2_protocol.h
 ..\obj\key.o: ..\USER\project_config.h
+..\obj\key.o: ..\USER\NVIC_Priority.h

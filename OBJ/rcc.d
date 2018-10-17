@@ -31,3 +31,4 @@
 ..\obj\rcc.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\rcc.o: ..\HARDWARE\RCC\rcc.h
 ..\obj\rcc.o: ..\USER\project_config.h
+..\obj\rcc.o: ..\USER\NVIC_Priority.h
