@@ -17,6 +17,7 @@
 #include "spi.h"
 #include "flash.h"
 #include "malloc.h"
+#include "tim3.h"
 /*
 注释 2018 10.17 
 SRAM 48K
@@ -25,6 +26,7 @@ FLASH 256K
  extern u8 SPO2_FLAG;
  extern u8 SEAT_FLAG;
  extern u8 FLASH_FLAG;
+ extern u8 TIM3_FLAG;
  /*******************************************************************************
   * @函数名称	main
   * @函数说明   主函数 注意设置中断向量表偏移
@@ -73,7 +75,7 @@ FLASH 256K
 	delay_ms(1000); //等待1S使系统稳定下来
   Get_Flash_Buffer(); //更新掉电信息 （座椅高度信息）
 	
-	
+	TIM3_Init();
 	while(1)
 	{
 		
@@ -85,11 +87,22 @@ FLASH 256K
 		}
 		
 		FLASH_FLAG=SEAT_FLAG || 0x01; //判断FLASH掉电信息是否需要保存 所有FLAG位或运算
-		if(FLASH_FLAG==1)  //座椅高度更新 OR 
+		if(FLASH_FLAG==1)  //座椅高度更新 OR 其他需要掉电保存的信息更新 
 		{
 			Set_Flash_Buffer();
 			SEAT_FLAG=0x00;
 			FLASH_FLAG=0x00;
+		}
+		
+		if(TIM3_FLAG==1)
+		{
+			/*发送相关数据给上位机 */
+			
+			
+			
+			/*发送完成后重新开启计时*/
+			TIM3_FLAG=0x00;
+			TIM3_ENABLE();
 		}
 	}
  }

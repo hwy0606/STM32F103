@@ -44,3 +44,6 @@
 #define PC0_HALL_PreemptionPriority 1
 #define PC0_HALL_SubPriority        1
 
+/* TIM3 定时器更新中断 */
+#define TIM3_IRQ_PreemptionPriority 1
+#define TIM3_IRQ_SubPriority        1

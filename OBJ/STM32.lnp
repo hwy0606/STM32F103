@@ -21,6 +21,7 @@
 "..\obj\spi.o"
 "..\obj\flash.o"
 "..\obj\malloc.o"
+"..\obj\tim3.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"

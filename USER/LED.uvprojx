@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16;..\HARDWARE\Usart1_Protocol;..\HARDWARE\Usart3_Protocol;..\HARDWARE\Motor_Control;..\HARDWARE\Usart2_Protocol;..\HARDWARE\Usart5_DMA;..\HARDWARE\Usart5_Protocol;..\HARDWARE\ADC;..\HARDWARE\RCC;..\HARDWARE\SPI;..\HARDWARE\Flash;..\HARDWARE\MALLOC</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\Usart1_DMA;..\STM32F10x_FWLib\src;..\HARDWARE\Usart2_DMA;..\HARDWARE\Usart3_DMA;..\HARDWARE\PWM;..\HARDWARE\GPIO;..\HARDWARE\Hall_Sensor;..\HARDWARE\Key;..\HARDWARE\Encoder;..\HARDWARE\CRC_16;..\HARDWARE\Usart1_Protocol;..\HARDWARE\Usart3_Protocol;..\HARDWARE\Motor_Control;..\HARDWARE\Usart2_Protocol;..\HARDWARE\Usart5_DMA;..\HARDWARE\Usart5_Protocol;..\HARDWARE\ADC;..\HARDWARE\RCC;..\HARDWARE\SPI;..\HARDWARE\Flash;..\HARDWARE\MALLOC;..\HARDWARE\TIM3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -503,6 +503,11 @@
               <FileName>malloc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\MALLOC\malloc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\TIM3\tim3.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -104,6 +104,9 @@ void RCC_Init()
 	#ifdef USE_SPI_7277
 	RCC_APB2PeriphClockCmd(SPI_GPIO_RCC,ENABLE );	
 	RCC_APB1PeriphClockCmd(SPI_RCC,ENABLE );	
+	
+	/* 任务更新 TIM3 */
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3,ENABLE);
 	#endif
 }	
 	

@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////// 
 #include "NVIC_Priority.h"
 ////////////////////////////////////////////////////////////////////////////////// 
-//串口DMA S使用和配置 
+//串口DMA 使用和配置 
 #define USE_USART1_DMA
 #define USE_USART2_DMA
 #define USE_USART3_DMA
@@ -14,7 +14,7 @@
 #define USART1_BaudRate 115200
 #define USART2_BaudRate 115200
 #define USART3_BaudRate 115200
-#define USART5_BaudRate 115200
+#define USART5_BaudRate 9600
 /*USART1 相关宏定义 */
 /* UART1 GPIO define. */            //宏定义
 #define USART1_GPIO_TX       		   GPIO_Pin_9
@@ -60,8 +60,7 @@
 #define USE_PWM_CH4
 
 /*PWM相关宏定义*/
-#define PWM_CH1_GPIO     GPIO_Pin_6
-#define PWM_CH2_GPIO     GPIO_Pin_7
+
 #define PWM_CH3_GPIO     GPIO_Pin_8
 #define PWM_CH4_GPIO     GPIO_Pin_9
 #define PWM_GPIO_RCC     RCC_APB2Periph_GPIOB
@@ -74,6 +73,7 @@
 #define PWM_Frequency 100
 #define PWM_ARR  (72000/PWM_Frequency)-1
 #define PWM_PSC 0 //不分频
+
 
 //500HZ频率测试
 //#define PWM_ARR  20000-1
@@ -252,3 +252,8 @@
 
 /* 内存管理相关宏定义*/
 #define USE_MEM_MALLOC
+
+/* TIM3相关宏定义*/
+/*更新频率 500ms */
+#define TIM3_ARR 5000-1
+#define TIM3_PSC 7200-1

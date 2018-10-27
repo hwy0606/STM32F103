@@ -68,3 +68,4 @@
 ..\obj\main.o: ..\USER\project_config.h
 ..\obj\main.o: ..\USER\NVIC_Priority.h
 ..\obj\main.o: ..\HARDWARE\MALLOC\malloc.h
+..\obj\main.o: ..\HARDWARE\TIM3\tim3.h
