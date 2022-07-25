@@ -1,11 +1,11 @@
 STM32F103RCT6 Project
-JTAGµ÷ÊÔ ÇëÎðÊ¹ÓÃ PB3 PB4 PA15
-½Ó¿Ú¶¨Òå£º
-´®¿Ú1 PA9 PA10
-´®¿Ú2 PA2 PA3
-´®¿Ú3 PB10 PB11
+JTAGï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ PB3 PB4 PA15
+ï¿½Ó¿Ú¶ï¿½ï¿½å£º
+ï¿½ï¿½ï¿½ï¿½1 PA9 PA10
+ï¿½ï¿½ï¿½ï¿½2 PA2 PA3
+ï¿½ï¿½ï¿½ï¿½3 PB10 PB11
 PWM*2 PB6 PB7 PB8 PB9
-°´¼ü*8 PA0 PA1 PD2 PC3 PC4 PC5 PC6 PC7 PC8 PC9
+ï¿½ï¿½ï¿½ï¿½*8 PA0 PA1 PD2 PC3 PC4 PC5 PC6 PC7 PC8 PC9
 
 LED PA8 PD2
 LED PC0 PC1
@@ -14,3 +14,6 @@ Hall_Sensor PA6 PA7
 GPIO 4+3
 4:PB12 PB13 PB14 PB15
 3:PC10 PC11 PC12
+
+
+gittest
